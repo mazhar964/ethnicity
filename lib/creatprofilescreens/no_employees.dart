@@ -22,10 +22,13 @@ class _NoEmployeesState extends State<NoEmployees> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 22.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(
-            height: 78,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.067,
           ),
-          const CreateProfileTile(
+          CreateProfileTile(
+            arrowontap: () {
+              Navigator.pop(context);
+            },
             color: Color(0xffD4D6F6),
             color2: Color(0xffF9437D),
             width5: 12,

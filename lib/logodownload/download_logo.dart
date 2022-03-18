@@ -17,41 +17,46 @@ class DownloadLogo extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                height: 32,
-                width: 32,
-                decoration: BoxDecoration(
-                  color: const Color(0xff222232),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Container(
+                  height: 32,
+                  width: 32,
+                  decoration: BoxDecoration(
+                    color: const Color(0xff222232),
 
-                  borderRadius: BorderRadius.circular(6),
-                  // shape: BoxShape.circle,
-                  // color: checkBoxValueTwo
-                  // ? const Color(0xff0A7302)
-                  // : const Color(0xff898A8A)
-                ),
-                child: const Icon(
-                  Icons.close_outlined,
-                  color: Colors.white,
-                  size: 18,
-                ),
-              ),
-              Container(
-                height: 32,
-                width: 32,
-                decoration: BoxDecoration(
-                  color: const Color(0xff222232),
-                  borderRadius: BorderRadius.circular(6),
-                  // shape: BoxShape.circle,
-                  // color: checkBoxValueTwo
-                  // ? const Color(0xff0A7302)
-                  // : const Color(0xff898A8A)
-                ),
-                child: const Icon(
-                  Icons.file_download_outlined,
-                  color: Colors.white,
-                  size: 18,
+                    borderRadius: BorderRadius.circular(6),
+                    // shape: BoxShape.circle,
+                    // color: checkBoxValueTwo
+                    // ? const Color(0xff0A7302)
+                    // : const Color(0xff898A8A)
+                  ),
+                  child: const Icon(
+                    Icons.close_outlined,
+                    color: Colors.white,
+                    size: 18,
+                  ),
                 ),
               ),
+              // Container(
+              //   height: 32,
+              //   width: 32,
+              //   decoration: BoxDecoration(
+              //     color: const Color(0xff222232),
+              //     borderRadius: BorderRadius.circular(6),
+              //     // shape: BoxShape.circle,
+              //     // color: checkBoxValueTwo
+              //     // ? const Color(0xff0A7302)
+              //     // : const Color(0xff898A8A)
+              //   ),
+              //   child: const Icon(
+              //     Icons.file_download_outlined,
+              //     color: Colors.white,
+              //     size: 18,
+              //   ),
+              // ),
             ],
           ),
           const SizedBox(

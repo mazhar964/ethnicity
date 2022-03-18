@@ -37,10 +37,13 @@ class _SetProfileImageState extends State<SetProfileImage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 22.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(
-            height: 78,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.067,
           ),
-          const CreateProfileTile(
+          CreateProfileTile(
+            arrowontap: () {
+              Navigator.pop(context);
+            },
             color: Color(0xffFFFFFF),
             width5: 12,
             color1: Color(0xffF9437D),

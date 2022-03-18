@@ -14,7 +14,7 @@ class CreateProfileTile extends StatelessWidget {
     this.width2,
     this.width3,
     this.width4,
-    this.width5,
+    this.width5, this.arrowontap,
   }) : super(key: key);
   final Color? color;
   final Color? color1;
@@ -29,6 +29,7 @@ class CreateProfileTile extends StatelessWidget {
   final double? width3;
   final double? width4;
   final double? width5;
+  final VoidCallback? arrowontap;
 
   @override
   Widget build(BuildContext context) {
@@ -41,22 +42,25 @@ class CreateProfileTile extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              height: 51,
-              width: 51,
-              decoration: BoxDecoration(
-                color: const Color(0xff222232),
+            GestureDetector(
+              onTap: arrowontap,
+              child: Container(
+                height: 51,
+                width: 51,
+                decoration: BoxDecoration(
+                  color: const Color(0xff222232),
 
-                borderRadius: BorderRadius.circular(12),
-                // shape: BoxShape.circle,
-                // color: checkBoxValueTwo
-                // ? const Color(0xff0A7302)
-                // : const Color(0xff898A8A)
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_outlined,
-                color: Colors.white,
-                size: 15,
+                  borderRadius: BorderRadius.circular(12),
+                  // shape: BoxShape.circle,
+                  // color: checkBoxValueTwo
+                  // ? const Color(0xff0A7302)
+                  // : const Color(0xff898A8A)
+                ),
+                child: const Icon(
+                  Icons.arrow_back_ios_outlined,
+                  color: Colors.white,
+                  size: 15,
+                ),
               ),
             ),
             Row(

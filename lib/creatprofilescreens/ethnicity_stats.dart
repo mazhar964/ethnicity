@@ -21,10 +21,13 @@ class _EthnicityStatsState extends State<EthnicityStats> {
         child: SingleChildScrollView(
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.067,
             ),
-            const CreateProfileTile(
+            CreateProfileTile(
+              arrowontap: () {
+                Navigator.pop(context);
+              },
               color: Color(0xffD4D6F6),
               color4: Color(0xffF9437D),
               width5: 12,

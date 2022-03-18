@@ -241,6 +241,9 @@ class BottomSheetSignUp {
                             onPressed: () async {},
                           ),
                         ),
+                        const SizedBox(
+                          width: 10,
+                        ),
                         Expanded(
                           child: AppButton(
                             isLeftAlign: true,

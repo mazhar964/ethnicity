@@ -21,10 +21,13 @@ class _SetNameState extends State<SetName> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 22.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const SizedBox(
-            height: 78,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.067,
           ),
-          const CreateProfileTile(
+          CreateProfileTile(
+            arrowontap: () {
+              Navigator.pop(context);
+            },
             color: Color(0xffF9437D),
           ),
           const SizedBox(
