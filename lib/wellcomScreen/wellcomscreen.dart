@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../Widget/app_button_widget.dart';
 import '../Widget/bottom_sheet_signup.dart';
 import '../Widget/input_field_widget.dart';
-import '../creatprofilescreens/setname.dart';
+import '../creatprofilescreens/creatprofilemain.dart';
 import '../logodownload/download_logo.dart';
 
 class Wellcom extends StatefulWidget {
@@ -366,7 +366,7 @@ class _WellcomState extends State<Wellcom> {
                                       height: 53,
                                       width: double.infinity,
                                       onPressed: () async {
-                                        Get.to(const SetName());
+                                        Get.to(const MainCreatProfile());
                                       },
                                     ),
                                     const SizedBox(

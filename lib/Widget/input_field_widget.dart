@@ -70,16 +70,17 @@ class InPutFieldWidget extends StatelessWidget {
           focusedBorder: focusedBorder ??
               OutlineInputBorder(
                 borderSide: const BorderSide(
-                  width: 1.0,
+                  width: 1.5,
+                  color: Colors.white
                 ),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(4.0),
               ),
           enabledBorder: enabledBorder ??
               OutlineInputBorder(
                 borderSide: const BorderSide(
                   color: Color(0xff979797),
                 ),
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(4.0),
               ),
           // border: border ??
           //     OutlineInputBorder(
