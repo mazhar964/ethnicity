@@ -38,6 +38,8 @@ dependencies:
   flutter_svg: ^1.0.3
   image_picker: ^0.8.4+11
   slide_drawer: ^1.0.3
+  syncfusion_flutter_charts: ^19.4.56
+  fl_chart: ^0.45.0
 
 dev_dependencies:
   flutter_test:
@@ -90,6 +92,9 @@ flutter:
       - family: sourceSansProSemiBold
         fonts:
           - asset: assets/fonts/SourceSansPro-SemiBold.ttf
+      - family: ibmPlexRegular
+        fonts:
+          - asset: assets/fonts/IBMPlexSans-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

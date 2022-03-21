@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../strings/string.dart';
 
 class DrawerRowWidget extends StatelessWidget {
   const DrawerRowWidget({
@@ -37,17 +38,18 @@ class DrawerRowWidget extends StatelessWidget {
               AssetImage(
                 imageUrl!,
               ),
-              color: imgColor ?? const Color(0xff9FA5BB),
+              color: imgColor ?? const Color(0xff757D8A),
+              size: 27,
             ),
-          const SizedBox(width: 13),
+          const SizedBox(width: 16),
           Text(
             title ?? "",
             style: TextStyle(
                 //fontFamily: AppFonts.alMedium,
 
                 color: textColor ?? const Color(0xff9FA5BB),
-               // fontFamily: kSofiaSemiBold,
-                fontSize: 15),
+                fontFamily: sourceSansRegular,
+                fontSize: 18),
           ),
         ],
       ),

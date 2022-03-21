@@ -514,6 +514,7 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               //Get.to(const SetProfileImage());
             },
           ),
+          
         ]),
       ),
     );

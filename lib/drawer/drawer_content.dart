@@ -1,13 +1,8 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:slide_drawer/slide_drawer.dart';
 
 import '../Widget/drawer_row_widget.dart';
 import '../strings/string.dart';
-
-
-
 
 class CustomDrawerContent extends StatefulWidget {
   const CustomDrawerContent({Key? key, required this.context})
@@ -19,97 +14,88 @@ class CustomDrawerContent extends StatefulWidget {
 }
 
 class _CustomDrawerContentState extends State<CustomDrawerContent> {
-  
   // final ImagePicker _picker = ImagePicker();
   // String refName = 'UserImage';
   // File? file;
 
   @override
   Widget build(BuildContext context) {
-   
     return Scaffold(
-      backgroundColor:const  Color(0xff222232),
+      backgroundColor: const Color(0xff222232),
       body: Padding(
-        padding: const EdgeInsets.only(left:24.0,top: 55,),
+        padding: const EdgeInsets.only(
+          left: 24.0,
+          top: 55,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 54),
             Padding(
-              padding: const EdgeInsets.only(right:100.0),
-              child: Row(children: [
-
-                 Container(
-                   
+              padding: const EdgeInsets.only(right: 100.0),
+              child: Row(
+                children: [
+                  Container(
                       height: 30,
                       width: 26,
-                      decoration:const  BoxDecoration(
-                      //  color: const Color(0xff222232),
-                     
+                      decoration: const BoxDecoration(
+                          //  color: const Color(0xff222232),
 
-                      //  borderRadius: BorderRadius.circular(12),
+                          //  borderRadius: BorderRadius.circular(12),
 
+                          ),
+                      child: Image.asset(
+                        'assets/images/fanlogo.png',
+                        height: 30,
+                        width: 26,
+                      )),
+                  const SizedBox(
+                    width: 7,
+                  ),
+                  const Text(
+                    "Fantech Labs",
+                    style: TextStyle(
+                        color: Color(0xff979797),
+                        fontFamily: sourceSansRegular,
+                        fontSize: 18),
+                  ),
+                  const Spacer(),
+                  GestureDetector(
+                    onTap: () {
+                      SlideDrawer.of(context)?.toggle();
+                    },
+                    child: Container(
+                      height: 24,
+                      width: 24,
+                      decoration: BoxDecoration(
+                        color: const Color(0xff181829),
+                        borderRadius: BorderRadius.circular(4),
                       ),
-                      child:SvgPicture.asset(
-
-                        'assets/images/message.svg',
-                       
-
-
-
-                      )
-                    ),
-                  const   SizedBox(width: 7,),
-
-                  const    Text(
-                "Fantech Labs",
-                style:  TextStyle(
-                   
-                    color: Color(0xff979797),
-                    fontFamily:sourceSansRegular ,
-                    fontSize: 18),
-              ),
-           const  Spacer(),
-
-
- Container(
-                    height: 24,
-                    width: 24,
-                    decoration: BoxDecoration(
-                      color: const Color(0xff181829),
-
-                      borderRadius: BorderRadius.circular(12),
-                      // shape: BoxShape.circle,
-                      // color: checkBoxValueTwo
-                      // ? const Color(0xff0A7302)
-                      // : const Color(0xff898A8A)
-                    ),
-                    child: const Icon(
-                      Icons.close_outlined,
-                      color: Colors.white,
-                      size: 15,
+                      child: const Icon(
+                        Icons.close_outlined,
+                        color: Colors.white,
+                        size: 15,
+                      ),
                     ),
                   ),
-
-
-              ],),
+                ],
+              ),
             ),
-         
-         
 
             const SizedBox(height: 77),
             DrawerRowWidget(
               onTap: () {},
-              iconData: Icons.home_outlined,
-              iconColor: Colors.white,
-              
-           //  imageUrl: 'assets/images/Group.png',
+              // iconData: Icons.home_outlined,
+              // iconColor: Colors.white,
+
+              imageUrl: 'assets/images/home.png',
+              imgColor: Colors.white,
               title: 'Home',
+              textColor: Colors.white,
             ),
             const SizedBox(height: 33),
             DrawerRowWidget(
               onTap: () {},
-              
               title: 'Suppliers ',
               imageUrl: 'assets/images/supply.png',
             ),
@@ -145,10 +131,10 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
                 //   }
                 // }, secondButtonText: "No", secondCallback: () {});
               },
-              imageUrl: 'assets/logout.png',
-              title: 'Log out',
-              textColor: const Color(0xff1B78B1),
-              imgColor: const Color(0xff1B78B1),
+              imageUrl: 'assets/images/signout.png',
+              title: 'Sign Out',
+              textColor: const Color(0xffD1160F),
+              imgColor: const Color(0xffD1160F),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.1),
             // const SizedBox(height: 50),
@@ -168,4 +154,4 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
   //   await updateUserImages(file);
   // }
 
-  }
+}
