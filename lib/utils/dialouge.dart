@@ -1,7 +1,10 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 
+// ignore: constant_identifier_names
 enum ActionStyle { normal, destructive, important, important_destructive }
 
 class AppDialog {

@@ -1,4 +1,6 @@
+import 'package:ethnicity/drawer/suppliers/supplier.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:slide_drawer/slide_drawer.dart';
 
 import '../Widget/drawer_row_widget.dart';
@@ -95,7 +97,9 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
             ),
             const SizedBox(height: 33),
             DrawerRowWidget(
-              onTap: () {},
+              onTap: () {
+                Get.to(const Supplier());
+              },
               title: 'Suppliers ',
               imageUrl: 'assets/images/supply.png',
             ),

@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../strings/string.dart';
 
 class AppButton extends StatelessWidget {
-   AppButton({
+   const AppButton({
     Key? key,
     this.height,
     this.width,

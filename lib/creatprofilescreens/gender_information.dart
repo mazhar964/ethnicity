@@ -1,12 +1,10 @@
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../Widget/app_button_widget.dart';
-import '../Widget/creatprofile_tile.dart';
 import '../Widget/input_field_widget.dart';
-import 'ethnicity_stats.dart';
 
+// ignore: must_be_immutable
 class GenderInformation extends StatefulWidget {
    GenderInformation({Key? key, required this.pageController,required this.selectedIndex}) : super(key: key);
 
@@ -70,7 +68,7 @@ class _GenderInformationState extends State<GenderInformation> {
 
             keyboardType: TextInputType.text,
           ),
-          SizedBox(height: 19),
+      const     SizedBox(height: 19),
           InPutFieldWidget(
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
            

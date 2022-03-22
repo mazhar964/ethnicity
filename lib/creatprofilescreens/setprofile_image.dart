@@ -2,14 +2,11 @@ import 'dart:io';
 
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../Widget/app_button_widget.dart';
-import '../Widget/creatprofile_tile.dart';
-import 'no_employees.dart';
 
+// ignore: must_be_immutable
 class SetProfileImage extends StatefulWidget {
    SetProfileImage({Key? key, required this.pageController, required this.selectedIndex}) : super(key: key);
    int selectedIndex;

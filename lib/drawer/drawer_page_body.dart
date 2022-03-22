@@ -348,6 +348,93 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                         ]),
                   ),
                 ),
+                const SizedBox(height: 20),
+                Container(
+                  decoration: BoxDecoration(
+                    color: const Color(0xff222232),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 16.0, right: 16, top: 16, bottom: 16),
+                    child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Ethnicity stats",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Color(0xffFFFFFF),
+                              fontFamily: ibmPlexRegular,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          Row(
+                            children: [
+                              Image.asset(
+                                'assets/images/fanlogo.png',
+                                height: 19,
+                                width: 16,
+                              ),
+                              const SizedBox(
+                                width: 7,
+                              ),
+                              const Text(
+                                "Fantech Labs",
+                                style: TextStyle(
+                                    color: Color(0xff979797),
+                                    fontFamily: sourceSansRegular,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 14),
+                              ),
+                            ],
+                          ),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 9.0),
+                            child: Column(
+                              children: const [
+                                SizedBox(
+                                  height: 17,
+                                ),
+                                BarChatTile(
+                                  text: "Men (90%)",
+                                  value: 0.8,
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                BarChatTile(
+                                  text: "Women (9.6%)",
+                                  value: 0.11,
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                BarChatTile(
+                                  text: "Non-binary (0%)",
+                                  value: 0,
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                BarChatTile(
+                                  text: "Gender fluid  (0%)",
+                                  value: 0,
+                                ),
+                                SizedBox(
+                                  height: 7,
+                                ),
+                                BarChatTile(
+                                  text: "Transgender  (0.4%)",
+                                  value: 0.04,
+                                ),
+                              ],
+                            ),
+                          )
+                        ]),
+                  ),
+                ),
               ],
             ),
           ),
@@ -412,5 +499,45 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
           throw Error();
       }
     });
+  }
+}
+
+class BarChatTile extends StatelessWidget {
+  const BarChatTile({
+    Key? key,
+    required this.text,
+    this.value,
+  }) : super(key: key);
+  final String text;
+  final double? value;
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(3)),
+          child: LinearProgressIndicator(
+            minHeight: 40,
+            value: value,
+            backgroundColor: const Color(0xffF85F6A).withOpacity(0.10),
+            valueColor: const AlwaysStoppedAnimation<Color>(
+              Color(0xffF85F6A),
+            ),
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16, top: 12.0, bottom: 12),
+          child: Text(
+            text,
+            style: const TextStyle(
+                color: Color(0xffFFFFFF),
+                fontFamily: sourceSansRegular,
+                fontWeight: FontWeight.w400,
+                fontSize: 14),
+          ),
+        )
+      ],
+    );
   }
 }

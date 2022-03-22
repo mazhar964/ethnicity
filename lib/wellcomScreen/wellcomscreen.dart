@@ -75,7 +75,7 @@ class _WellcomState extends State<Wellcom> {
                 ),
                 AppButton(
                   radius: 6,
-                  color: Color(0xff181829),
+                  color:const  Color(0xff181829),
                   text: "Sign Up",
                   textColor: const Color(0xffFFFFFF),
                   height: 53,
@@ -182,18 +182,13 @@ class _WellcomState extends State<Wellcom> {
                                       ),
 
                                       hintColor: const Color(0xff707070),
-                                      //isPassword: true,
+                              
                                       hint: 'Email',
-                                      //  labelText: 'E-Mail',
-                                      //  validator: passwordValidator,
+                             
 
                                       keyboardType: TextInputType.text,
 
-                                      // onChanged: (String? value) {
-                                      //   setState(() {
-                                      //     password = value!;
-                                      //   });
-                                      // },
+                                      
                                     ),
                                     const SizedBox(
                                       height: 24,

@@ -922,7 +922,7 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
             //   widget.pageController.animateToPage(1,
             //             duration: const Duration(milliseconds: 500),
             //             curve: Curves.easeIn);
-           Get.to( CustomDrawerApp());
+           Get.to(const  CustomDrawerApp());
           },
         ),
         

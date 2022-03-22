@@ -62,7 +62,7 @@ class _NoEmployeesState extends State<NoEmployees> {
           //   borderSide: const BorderSide(color: Color(0xff222232)),
           //   borderRadius: BorderRadius.circular(15.0),
           // ),
-          contentPadding: EdgeInsets.only(bottom: 12),
+          contentPadding:const  EdgeInsets.only(bottom: 12),
 
           hintColor: const Color(0xff65656B),
 

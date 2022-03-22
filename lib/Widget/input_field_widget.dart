@@ -21,7 +21,7 @@ class InPutFieldWidget extends StatelessWidget {
     this.hintfontSize,
     this.width,
     this.enabledBorder,
-    this.focusedBorder,
+    this.focusedBorder, this.fillcolor,
   }) : super(key: key);
 
   final String hint, labelText;
@@ -41,6 +41,7 @@ class InPutFieldWidget extends StatelessWidget {
   final double? width;
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
+  final Color? fillcolor;
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +59,7 @@ class InPutFieldWidget extends StatelessWidget {
         textCapitalization: textCapitalization,
         keyboardType: keyboardType ?? TextInputType.text,
         decoration: InputDecoration(
-          fillColor: const Color(0xff181829),
+          fillColor:fillcolor?? const Color(0xff181829),
           filled: true,
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
@@ -69,10 +70,7 @@ class InPutFieldWidget extends StatelessWidget {
           floatingLabelBehavior: FloatingLabelBehavior.always,
           focusedBorder: focusedBorder ??
               OutlineInputBorder(
-                borderSide: const BorderSide(
-                  width: 1.5,
-                  color: Colors.white
-                ),
+                borderSide: const BorderSide(width: 1.5, color: Colors.white),
                 borderRadius: BorderRadius.circular(4.0),
               ),
           enabledBorder: enabledBorder ??
