@@ -5,6 +5,7 @@ import 'package:slide_drawer/slide_drawer.dart';
 
 import '../Widget/drawer_row_widget.dart';
 import '../strings/string.dart';
+import 'payment/payment.dart';
 
 class CustomDrawerContent extends StatefulWidget {
   const CustomDrawerContent({Key? key, required this.context})
@@ -106,7 +107,9 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
 
             const SizedBox(height: 33),
             DrawerRowWidget(
-              onTap: () {},
+              onTap: () {
+                Get.to(const Payment());
+              },
               imageUrl: 'assets/images/payment.png',
               title: 'Payments',
             ),
@@ -119,22 +122,7 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
             ),
             const Spacer(),
             DrawerRowWidget(
-              onTap: () {
-                // AppDialog().showOSDialog(context, "Confirm",
-                //     "Are you sure you want to log out?", "Yes", () async {
-                //   try {
-                //     await FirebaseAuth.instance.signOut();
-                //     Navigator.pushReplacement(
-                //       context,
-                //       MaterialPageRoute(builder: (context) => const SignIn()),
-                //     );
-
-                //     AppStatic.currentUser = UserModel();
-                //   } catch (e) {
-                //     print(e);
-                //   }
-                // }, secondButtonText: "No", secondCallback: () {});
-              },
+              onTap: () {},
               imageUrl: 'assets/images/signout.png',
               title: 'Sign Out',
               textColor: const Color(0xffD1160F),
@@ -147,15 +135,4 @@ class _CustomDrawerContentState extends State<CustomDrawerContent> {
       ),
     );
   }
-
-  // void pickImage(ImageSource imageSource) async {
-  //   var photo = await _picker.pickImage(source: imageSource, imageQuality: 40);
-  //   if (photo != null) {
-  //     setState(() {
-  //       file = File(photo.path);
-  //     });
-  //   }
-  //   await updateUserImages(file);
-  // }
-
 }

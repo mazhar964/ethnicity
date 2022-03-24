@@ -1,20 +1,20 @@
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
+
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
 
-class NoEmployees extends StatefulWidget {
-  const NoEmployees(
-      {Key? key, required this.pageController, required this.selectedIndex})
+// ignore: must_be_immutable
+class SetName extends StatefulWidget {
+  SetName({Key? key, required this.selectedIndex, required this.pageController})
       : super(key: key);
-  final int selectedIndex;
+  int selectedIndex;
   final PageController pageController;
-
   @override
-  State<NoEmployees> createState() => _NoEmployeesState();
+  State<SetName> createState() => _SetNameState();
 }
 
-class _NoEmployeesState extends State<NoEmployees> {
+class _SetNameState extends State<SetName> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,8 +24,19 @@ class _NoEmployeesState extends State<NoEmployees> {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.1366,
           ),
+
+          // SizedBox(height: 111,)
+          // CreateProfileTile(
+          //   arrowontap: () {
+          //     Navigator.pop(context);
+          //   },
+          //   color: Color(0xffF9437D),
+          // ),
+          // const SizedBox(
+          //   height: 111,
+          // ),
           const Text(
-            "How many employees does\nyour company have?",
+            "What is your\nCompany name?",
             style: TextStyle(
               color: Color(0xffFFFFFF),
               fontSize: 24,
@@ -38,6 +49,10 @@ class _NoEmployeesState extends State<NoEmployees> {
               borderSide: BorderSide(
                   color: const Color(0xffC4C4C4).withOpacity(0.33), width: 2.5),
             ),
+
+            contentPadding: const EdgeInsets.only(bottom: 12),
+
+            hintColor: const Color(0xff707070),
             focusedBorder: UnderlineInputBorder(
               borderSide: BorderSide(
                   color: const Color(0xffC4C4C4).withOpacity(0.33), width: 2.5),
@@ -46,14 +61,33 @@ class _NoEmployeesState extends State<NoEmployees> {
               borderSide: BorderSide(
                   color: const Color(0xffC4C4C4).withOpacity(0.33), width: 2.5),
             ),
-            contentPadding: const EdgeInsets.only(bottom: 12),
-            hintColor: const Color(0xff65656B),
-            hint: 'Give a total count',
+
+            //isPassword: isPassword,
+            hint: 'Company abc',
             hintfontSize: 16,
+            //  labelText: 'E-Mail',
+            //  validator: passwordValidator,
+            // suffixIcon: GestureDetector(
+            //   onTap: () {
+            //     setState(() {
+            //       isPassword = !isPassword;
+            //     });
+            //   },
+            //   child: Icon(
+            //     isPassword ? Icons.visibility_off : Icons.visibility,
+            //     color: const Color(0xff9FA5BB),
+            //   ),
+            // ),
             keyboardType: TextInputType.text,
+
+            // onChanged: (String? value) {
+            //   setState(() {
+            //     password = value!;
+            //   });
+            // },
           ),
           const SizedBox(
-            height: 66,
+            height: 61,
           ),
           AppButton(
             radius: 6,
@@ -65,11 +99,12 @@ class _NoEmployeesState extends State<NoEmployees> {
             width: double.infinity,
             onPressed: () async {
               setState(() {
-                widget.selectedIndex != 3;
+                widget.selectedIndex != 1;
               });
-              widget.pageController.animateToPage(3,
+              widget.pageController.animateToPage(1,
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
+              // Get.to( SetProfileImage( selectedIndex: 1, pageController: widget.pageController,));
             },
           ),
         ]),

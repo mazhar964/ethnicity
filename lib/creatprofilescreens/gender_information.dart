@@ -6,11 +6,13 @@ import '../Widget/input_field_widget.dart';
 
 // ignore: must_be_immutable
 class GenderInformation extends StatefulWidget {
-   GenderInformation({Key? key, required this.pageController,required this.selectedIndex}) : super(key: key);
+  GenderInformation(
+      {Key? key, required this.pageController, required this.selectedIndex})
+      : super(key: key);
 
   int selectedIndex;
- final   PageController pageController;
- 
+  final PageController pageController;
+
   @override
   State<GenderInformation> createState() => _GenderInformationState();
 }
@@ -20,14 +22,11 @@ class _GenderInformationState extends State<GenderInformation> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-         
-         
+        padding: const EdgeInsets.symmetric(horizontal: 22.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           SizedBox(
-          height: MediaQuery.of(context).size.height * 0.1034,
-        ),
- 
+            height: MediaQuery.of(context).size.height * 0.1034,
+          ),
           const Text(
             "Fill in gender information",
             style: TextStyle(
@@ -60,7 +59,6 @@ class _GenderInformationState extends State<GenderInformation> {
             // ),
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-           
 
             //isPassword: isPassword,
             hint: 'Man',
@@ -68,10 +66,9 @@ class _GenderInformationState extends State<GenderInformation> {
 
             keyboardType: TextInputType.text,
           ),
-      const     SizedBox(height: 19),
+          const SizedBox(height: 19),
           InPutFieldWidget(
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-           
 
             //isPassword: isPassword,
             hint: 'Woman',
@@ -82,7 +79,6 @@ class _GenderInformationState extends State<GenderInformation> {
           const SizedBox(height: 19),
           InPutFieldWidget(
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-            
 
             //isPassword: isPassword,
             hint: 'Non-binary',
@@ -93,7 +89,6 @@ class _GenderInformationState extends State<GenderInformation> {
           const SizedBox(height: 19),
           InPutFieldWidget(
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-          
             hint: 'Gender fluid ',
             hintfontSize: 16,
             keyboardType: TextInputType.text,
@@ -106,7 +101,7 @@ class _GenderInformationState extends State<GenderInformation> {
             ),
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-           
+
             //isPassword: isPassword,
             hint: 'Transgender',
             hintfontSize: 16,
@@ -121,7 +116,6 @@ class _GenderInformationState extends State<GenderInformation> {
             ),
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-           
 
             //isPassword: isPassword,
             hint: 'Prefer not to say ',
@@ -160,12 +154,12 @@ class _GenderInformationState extends State<GenderInformation> {
             height: 53,
             width: double.infinity,
             onPressed: () async {
-             setState(() {
-            widget.selectedIndex!=4;
-            });
+              setState(() {
+                widget.selectedIndex != 4;
+              });
               widget.pageController.animateToPage(4,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
             },
           ),
         ]),

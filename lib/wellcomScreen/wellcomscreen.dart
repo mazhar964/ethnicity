@@ -7,7 +7,7 @@ import 'package:get/get.dart';
 import '../Widget/app_button_widget.dart';
 import '../Widget/bottom_sheet_signup.dart';
 import '../Widget/input_field_widget.dart';
-import '../creatprofilescreens/creatprofilemain.dart';
+import '../creatprofilescreens/create_profile_main.dart';
 import '../logodownload/download_logo.dart';
 
 class Wellcom extends StatefulWidget {
@@ -75,7 +75,7 @@ class _WellcomState extends State<Wellcom> {
                 ),
                 AppButton(
                   radius: 6,
-                  color:const  Color(0xff181829),
+                  // color: const Color(0xff181829),
                   text: "Sign Up",
                   textColor: const Color(0xffFFFFFF),
                   height: 53,
@@ -166,29 +166,23 @@ class _WellcomState extends State<Wellcom> {
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
                                       border: OutlineInputBorder(
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
-
                                       hintColor: const Color(0xff707070),
-                              
                                       hint: 'Email',
-                             
-
                                       keyboardType: TextInputType.text,
-
-                                      
                                     ),
                                     const SizedBox(
                                       height: 24,
@@ -216,19 +210,19 @@ class _WellcomState extends State<Wellcom> {
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
                                       enabledBorder: OutlineInputBorder(
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
                                       border: OutlineInputBorder(
                                         borderSide: const BorderSide(
                                             color: Color(0xff222232)),
                                         borderRadius:
-                                            BorderRadius.circular(15.0),
+                                            BorderRadius.circular(8.0),
                                       ),
 
                                       hintColor: const Color(0xff707070),
@@ -276,22 +270,18 @@ class _WellcomState extends State<Wellcom> {
                                                 border: Border.all(
                                                   color:
                                                       const Color(0xff65656B),
-                                                  width: 2,
+                                                  width: 1,
                                                 ),
                                                 borderRadius:
                                                     BorderRadius.circular(6),
-                                                // shape: BoxShape.circle,
-                                                // color: checkBoxValueTwo
-                                                // ? const Color(0xff0A7302)
-                                                // : const Color(0xff898A8A)
                                               ),
                                               child: checkBoxValueTwo
-                                                  ? const Offstage()
-                                                  : const Icon(
+                                                  ? const Icon(
                                                       Icons.check,
                                                       size: 10.0,
                                                       color: Colors.white,
-                                                    )),
+                                                    )
+                                                  : const Offstage()),
                                         ),
                                         const SizedBox(width: 12),
                                         RichText(
@@ -358,7 +348,6 @@ class _WellcomState extends State<Wellcom> {
                                       color: const Color(0xffF85F6A),
                                       text: "Sign Up",
                                       textColor: const Color(0xffFFFFFF),
-                                      height: 53,
                                       width: double.infinity,
                                       onPressed: () async {
                                         Get.to(const MainCreatProfile());

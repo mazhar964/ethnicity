@@ -4,11 +4,11 @@ import 'package:flutter_svg/svg.dart';
 import '../strings/string.dart';
 
 class AppButton extends StatelessWidget {
-   const AppButton({
+  const AppButton({
     Key? key,
     this.height,
     this.width,
-    required this.color,
+    this.color,
     required this.text,
     required this.textColor,
     required this.onPressed,
@@ -22,7 +22,7 @@ class AppButton extends StatelessWidget {
     this.fontWeight,
   }) : super(key: key);
   final bool isLeftAlign;
-  final Color color;
+  final Color? color;
   final String text;
   final String? img;
   final Color textColor;

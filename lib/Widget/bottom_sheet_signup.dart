@@ -281,6 +281,9 @@ class BottomSheetSignUp {
                             ]),
                       ),
                     ),
+                 const    SizedBox(
+                      height: 30,
+                    ),
                   ],
                 ),
               ),

@@ -6,9 +6,11 @@ import '../Widget/input_field_widget.dart';
 
 // ignore: must_be_immutable
 class EthnicityStats extends StatefulWidget {
-   EthnicityStats({Key? key, required this.selectedIndex, required this.pageController}) : super(key: key);
+  EthnicityStats(
+      {Key? key, required this.selectedIndex, required this.pageController})
+      : super(key: key);
   int selectedIndex;
- final   PageController pageController;
+  final PageController pageController;
 
   @override
   State<EthnicityStats> createState() => _EthnicityStatsState();
@@ -19,10 +21,8 @@ class _EthnicityStatsState extends State<EthnicityStats> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:
-            Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-         
-         
+        padding: const EdgeInsets.symmetric(horizontal: 22.0),
+        child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           const SizedBox(
             height: 47,
           ),
@@ -61,15 +61,9 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                  
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'English ',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -79,35 +73,10 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'Welsh',
                   hintfontSize: 16,
-
-                  //  labelText: 'E-Mail',
-                  //  validator: passwordValidator,
-                  // suffixIcon: GestureDetector(
-                  //   onTap: () {
-                  //     setState(() {
-                  //       isPassword = !isPassword;
-                  //     });
-                  //   },
-                  //   child: Icon(
-                  //     isPassword ? Icons.visibility_off : Icons.visibility,
-                  //     color: const Color(0xff9FA5BB),
-                  //   ),
-                  // ),
                   keyboardType: TextInputType.number,
-
-                  // onChanged: (String? value) {
-                  //   setState(() {
-                  //     password = value!;
-                  //   });
-                  // },
                 ),
               ),
             ],
@@ -118,7 +87,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Scottish ',
                   hintfontSize: 16,
@@ -131,14 +99,9 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                 
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-                  //isPassword: isPassword,
                   hint: 'Northern Irish',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -150,14 +113,9 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'British Irish',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -167,7 +125,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Gypsy',
                   hintfontSize: 16,
@@ -179,15 +136,9 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: 216,
-
-           
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-            //isPassword: isPassword,
             hint: 'Other White background',
             hintfontSize: 16,
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(height: 28),
@@ -203,25 +154,15 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           ),
           const SizedBox(height: 14),
           InPutFieldWidget(
-           
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-            //isPassword: isPassword,
             hint: 'Caribbean',
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-
-           
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-            //isPassword: isPassword,
             hint: 'African',
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(
@@ -229,7 +170,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           ),
           InPutFieldWidget(
             width: 216,
-            
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
             hint: 'Other Black background',
             hintfontSize: 16,
@@ -249,7 +189,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
             hint: 'White and Black Caribbean',
             keyboardType: TextInputType.number,
@@ -257,7 +196,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-            
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
             hint: 'White and Black African',
             keyboardType: TextInputType.number,
@@ -265,27 +203,16 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-            //isPassword: isPassword,
             hint: 'White & Asians',
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: 216,
-
-            
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-            //isPassword: isPassword,
             hint: 'Other Mixed ethnic',
             hintfontSize: 16,
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(height: 26),
@@ -302,7 +229,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
             hint: 'African American',
             keyboardType: TextInputType.number,
@@ -310,19 +236,13 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
-
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-            //isPassword: isPassword,
             hint: 'American Indian',
-
             keyboardType: TextInputType.number,
           ),
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
             hint: 'Alaska Native',
             keyboardType: TextInputType.number,
@@ -341,7 +261,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -353,8 +272,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-
-            
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -381,8 +298,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                 
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
                   //isPassword: isPassword,
@@ -398,8 +313,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                 
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -418,7 +331,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Bangladeshi ',
                   hintfontSize: 16,
@@ -431,8 +343,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                 
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   //isPassword: isPassword,
@@ -447,8 +357,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: 216,
-
-           
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -472,7 +380,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-           
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -484,8 +391,6 @@ class _EthnicityStatsState extends State<EthnicityStats> {
           const SizedBox(height: 14),
           InPutFieldWidget(
             width: double.infinity,
-
-           
 
             hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -504,17 +409,16 @@ class _EthnicityStatsState extends State<EthnicityStats> {
             height: 53,
             width: double.infinity,
             onPressed: () async {
-
               setState(() {
-            widget.selectedIndex!=5;
-            });
+                widget.selectedIndex != 5;
+              });
               widget.pageController.animateToPage(5,
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.easeIn);
+                  duration: const Duration(milliseconds: 500),
+                  curve: Curves.easeIn);
               //Get.to(const SetProfileImage());
             },
           ),
-          
+          const SizedBox(height: 40)
         ]),
       ),
     );
