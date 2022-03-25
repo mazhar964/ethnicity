@@ -304,38 +304,13 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
                   //isPassword: isPassword,
                   hint: 'Black',
                   hintfontSize: 16,
 
-                  //  labelText: 'E-Mail',
-                  //  validator: passwordValidator,
-                  // suffixIcon: GestureDetector(
-                  //   onTap: () {
-                  //     setState(() {
-                  //       isPassword = !isPassword;
-                  //     });
-                  //   },
-                  //   child: Icon(
-                  //     isPassword ? Icons.visibility_off : Icons.visibility,
-                  //     color: const Color(0xff9FA5BB),
-                  //   ),
-                  // ),
                   keyboardType: TextInputType.number,
-
-                  // onChanged: (String? value) {
-                  //   setState(() {
-                  //     password = value!;
-                  //   });
-                  // },
                 ),
               ),
             ],
@@ -346,11 +321,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Mixed ',
                   hintfontSize: 16,
@@ -364,15 +334,9 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   //isPassword: isPassword,
-                  hint: 'White American',
+
                   hintfontSize: 16,
 
                   keyboardType: TextInputType.number,
@@ -386,18 +350,9 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'Asian American',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -426,18 +381,9 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'Arab',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -447,11 +393,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'others',
                   hintfontSize: 16,
@@ -487,19 +428,9 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'White ',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -510,38 +441,13 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
                   //isPassword: isPassword,
                   hint: 'Black',
                   hintfontSize: 16,
 
-                  //  labelText: 'E-Mail',
-                  //  validator: passwordValidator,
-                  // suffixIcon: GestureDetector(
-                  //   onTap: () {
-                  //     setState(() {
-                  //       isPassword = !isPassword;
-                  //     });
-                  //   },
-                  //   child: Icon(
-                  //     isPassword ? Icons.visibility_off : Icons.visibility,
-                  //     color: const Color(0xff9FA5BB),
-                  //   ),
-                  // ),
                   keyboardType: TextInputType.number,
-
-                  // onChanged: (String? value) {
-                  //   setState(() {
-                  //     password = value!;
-                  //   });
-                  // },
                 ),
               ),
             ],
@@ -552,11 +458,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Mixed ',
                   hintfontSize: 16,
@@ -569,12 +470,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   //isPassword: isPassword,
@@ -592,11 +487,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
@@ -632,18 +522,9 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-                  //isPassword: isPassword,
                   hint: 'Arab',
                   hintfontSize: 16,
-
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -653,11 +534,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'others',
                   hintfontSize: 16,
@@ -694,12 +570,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
                   //isPassword: isPassword,
@@ -716,38 +586,13 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
                 child: InPutFieldWidget(
                   width: 159,
 
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
-
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 
                   //isPassword: isPassword,
                   hint: 'Black',
                   hintfontSize: 16,
 
-                  //  labelText: 'E-Mail',
-                  //  validator: passwordValidator,
-                  // suffixIcon: GestureDetector(
-                  //   onTap: () {
-                  //     setState(() {
-                  //       isPassword = !isPassword;
-                  //     });
-                  //   },
-                  //   child: Icon(
-                  //     isPassword ? Icons.visibility_off : Icons.visibility,
-                  //     color: const Color(0xff9FA5BB),
-                  //   ),
-                  // ),
                   keyboardType: TextInputType.number,
-
-                  // onChanged: (String? value) {
-                  //   setState(() {
-                  //     password = value!;
-                  //   });
-                  // },
                 ),
               ),
             ],
@@ -758,11 +603,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   hint: 'Mixed ',
                   hintfontSize: 16,
@@ -775,12 +615,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
                   //isPassword: isPassword,
@@ -798,11 +632,6 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               Expanded(
                 child: InPutFieldWidget(
                   width: 159,
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderSide: const BorderSide(
-                  //       color: Color(0xffFFFFFF), width: 1.5),
-                  //   borderRadius: BorderRadius.circular(4.0),
-                  // ),
 
                   hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
 

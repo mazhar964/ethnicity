@@ -36,7 +36,7 @@ class _WellcomState extends State<Wellcom> {
               width: 339,
             ),
             const Text(
-              'Welcome to Ethni-Gen',
+              'Welcome toEthni-Gen',
               textAlign: TextAlign.start,
               style: TextStyle(
                   fontSize: 40,
@@ -345,6 +345,7 @@ class _WellcomState extends State<Wellcom> {
                                     const SizedBox(height: 29),
                                     AppButton(
                                       radius: 6,
+                                      height: 53,
                                       color: const Color(0xffF85F6A),
                                       text: "Sign Up",
                                       textColor: const Color(0xffFFFFFF),
