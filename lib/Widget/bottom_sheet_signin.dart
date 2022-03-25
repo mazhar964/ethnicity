@@ -154,17 +154,11 @@ class BottomSheetSignIn {
                         });
                       },
                       child: Icon(
-                        isPassword ? Icons.visibility_off : Icons.visibility,
+                        isPassword ? Icons.visibility : Icons.visibility_off,
                         color: const Color(0xff9FA5BB),
                       ),
                     ),
                     keyboardType: TextInputType.text,
-
-                    // onChanged: (String? value) {
-                    //   setState(() {
-                    //     password = value!;
-                    //   });
-                    // },
                   ),
                   const SizedBox(
                     height: 22,
@@ -172,7 +166,7 @@ class BottomSheetSignIn {
                   const Align(
                     alignment: Alignment.bottomRight,
                     child: Text(
-                      'Forgot Password ?',
+                      'Forgot Password?',
                       //textAlign: TextAlign.end,
 
                       style: TextStyle(
@@ -263,7 +257,7 @@ class BottomSheetSignIn {
                   Center(
                     child: RichText(
                       text: TextSpan(
-                          text: 'Don’t have account',
+                          text: 'Don’t have account?',
                           style: const TextStyle(
                               color: Color(0xffC4C4C4),
                               fontFamily: sourceSansRegular),
@@ -292,4 +286,3 @@ class BottomSheetSignIn {
     );
   }
 }
-

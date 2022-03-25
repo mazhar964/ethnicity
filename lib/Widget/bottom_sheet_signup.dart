@@ -9,13 +9,11 @@ import '../strings/string.dart';
 import '../widget/app_button_widget.dart';
 import '../widget/input_field_widget.dart';
 
-
-class SignUp{
+class SignUp {
   customBottomSignUp(BuildContext context) {
-       bool isPassword = true;
+    bool isPassword = true;
     bool checkBoxValueTwo = false;
 
-    
     return showModalBottomSheet<void>(
       isScrollControlled: true,
       shape: RoundedRectangleBorder(
@@ -145,7 +143,7 @@ class SignUp{
                         });
                       },
                       child: Icon(
-                        isPassword ? Icons.visibility_off : Icons.visibility,
+                        isPassword ? Icons.visibility : Icons.visibility_off,
                         color: const Color(0xff9FA5BB),
                       ),
                     ),
@@ -240,7 +238,7 @@ class SignUp{
                     textColor: const Color(0xffFFFFFF),
                     width: double.infinity,
                     onPressed: () async {
-                      Get.to(const MainCreatProfile());
+                      Get.offAll(const MainCreatProfile());
                     },
                   ),
                   const SizedBox(

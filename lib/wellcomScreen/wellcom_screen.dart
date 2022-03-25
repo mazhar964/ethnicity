@@ -35,13 +35,13 @@ class _WellcomState extends State<Wellcom> {
             width: 339,
           ),
           const Text(
-            'Welcome toEthni-Gen',
+            'Welcome to Ethni-Gen',
             textAlign: TextAlign.start,
             style: TextStyle(
-                fontSize: 40,
-                fontFamily: sourceSansRegular,
-                color: Colors.white,
-                fontWeight: FontWeight.w600),
+              fontSize: 40,
+              fontFamily: sourceSansSemiBold,
+              color: Colors.white,
+            ),
           ),
           const SizedBox(
             height: 22,
@@ -76,7 +76,7 @@ class _WellcomState extends State<Wellcom> {
                 radius: 6,
                 // color: const Color(0xff181829),
                 text: "Sign Up",
-                textColor:const  Color(0xffFFFFFF),
+                textColor: const Color(0xffFFFFFF),
                 height: 53,
                 width: MediaQuery.of(context).size.width / 3,
                 onPressed: () async {

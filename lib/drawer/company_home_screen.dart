@@ -74,7 +74,7 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                           fontFamily: sourceSansRegular,
                           fontSize: 18),
                     ),
-                  const   SizedBox(
+                    const SizedBox(
                       width: 100,
                     ),
                     // const Spacer(),
@@ -114,7 +114,8 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                 imageUrl: 'assets/images/home.png',
                 imgColor: Colors.white,
                 title: 'Home',
-                textColor: Colors.white,
+                textColor:
+                    selectedindex == 0 ? Colors.white : Color(0xff9FA5BB),
               ),
               const SizedBox(height: 33),
               DrawerRowWidget(
@@ -126,6 +127,8 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                 },
                 title: 'Suppliers ',
                 imageUrl: 'assets/images/supply.png',
+                textColor:
+                    selectedindex == 1 ? Colors.white : Color(0xff9FA5BB),
               ),
 
               const SizedBox(height: 33),
@@ -137,6 +140,8 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
                 imageUrl: 'assets/images/payment.png',
+                textColor:
+                    selectedindex == 2 ? Colors.white : Color(0xff9FA5BB),
                 title: 'Payments',
               ),
 
