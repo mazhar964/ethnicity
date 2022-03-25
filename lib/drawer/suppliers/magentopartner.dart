@@ -2,7 +2,7 @@ import 'package:ethnicity/strings/string.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../Widget/individualwidget.dart';
+import '../../widget/individual_widget.dart';
 import '../drawer_page_body.dart';
 
 class MagentoPartner extends StatefulWidget {

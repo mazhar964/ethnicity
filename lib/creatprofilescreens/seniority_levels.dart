@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
+import '../drawer/company_home_screen.dart';
 import '../drawer/drawer.dart';
 import '../strings/string.dart';
 
@@ -717,7 +718,7 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               //   widget.pageController.animateToPage(1,
               //             duration: const Duration(milliseconds: 500),
               //             curve: Curves.easeIn);
-              Get.to(const CustomDrawerApp());
+              Get.to(const CompanyHmeScreen());
             },
           ),
           const SizedBox(height: 40),

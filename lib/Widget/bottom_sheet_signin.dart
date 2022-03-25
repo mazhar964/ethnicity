@@ -1,21 +1,14 @@
+import 'package:ethnicity/Widget/input_field_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
-import '../creatprofilescreens/create_profile_main.dart';
-import '../logodownload/download_logo.dart';
 import '../strings/string.dart';
-import '../widget/app_button_widget.dart';
-import '../widget/input_field_widget.dart';
+import 'app_button_widget.dart';
 
-
-class SignUp{
-  customBottomSignUp(BuildContext context) {
-       bool isPassword = true;
-    bool checkBoxValueTwo = false;
-
-    
+class BottomSheetSignIn {
+  customBottom(BuildContext context) {
+    bool isPassword = false;
     return showModalBottomSheet<void>(
       isScrollControlled: true,
       shape: RoundedRectangleBorder(
@@ -26,7 +19,7 @@ class SignUp{
       builder: (BuildContext context) {
         return StatefulBuilder(builder: ((context, setState) {
           return Container(
-            height: MediaQuery.of(context).size.height / 1.46,
+            height: MediaQuery.of(context).size.height / 1.3,
             decoration: const BoxDecoration(
               color: Color(0xff222232),
               borderRadius: BorderRadius.only(
@@ -36,27 +29,32 @@ class SignUp{
             ),
             // height: 900,
             child: SingleChildScrollView(
-              padding: const EdgeInsets.only(left: 24.0, right: 24, top: 11),
+              padding: const EdgeInsets.only(left: 24.0, right: 24, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                //     mainAxisSize: MainAxisSize.min,
+                //  mainAxisSize: MainAxisSize.min,
                 children: [
                   Center(
                     child: Container(
                       decoration: BoxDecoration(
                         color: const Color(0xffFFFFFF).withOpacity(0.10),
+
                         borderRadius: BorderRadius.circular(5),
+                        // shape: BoxShape.circle,
+                        // color: checkBoxValueTwo
+                        // ? const Color(0xff0A7302)
+                        // : const Color(0xff898A8A)
                       ),
                       height: 5,
                       width: 66,
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 24,
                   ),
                   const Text(
-                    "Sign Up",
+                    "Sign In",
                     style: TextStyle(
                       color: Color(0xffFFFFFF),
                       fontSize: 28,
@@ -87,19 +85,30 @@ class SignUp{
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
+
                     hintColor: const Color(0xff707070),
+                    //isPassword: true,
                     hint: 'Email',
+                    //  labelText: 'E-Mail',
+                    //  validator: passwordValidator,
+
                     keyboardType: TextInputType.text,
+
+                    // onChanged: (String? value) {
+                    //   setState(() {
+                    //     password = value!;
+                    //   });
+                    // },
                   ),
                   const SizedBox(
                     height: 24,
@@ -122,15 +131,15 @@ class SignUp{
                     ),
                     focusedBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
                     border: OutlineInputBorder(
                       borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(15.0),
                     ),
 
                     hintColor: const Color(0xff707070),
@@ -158,117 +167,119 @@ class SignUp{
                     // },
                   ),
                   const SizedBox(
-                    height: 24,
+                    height: 22,
                   ),
-                  Row(
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          setState(() {
-                            checkBoxValueTwo = !checkBoxValueTwo;
-                          });
-                        },
-                        child: Container(
-                            height: 19,
-                            width: 19,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                color: const Color(0xff65656B),
-                                width: 1,
-                              ),
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: checkBoxValueTwo
-                                ? const Icon(
-                                    Icons.check,
-                                    size: 10.0,
-                                    color: Colors.white,
-                                  )
-                                : const Offstage()),
+                  const Align(
+                    alignment: Alignment.bottomRight,
+                    child: Text(
+                      'Forgot Password ?',
+                      //textAlign: TextAlign.end,
+
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontFamily: sourceSansRegular,
+                        color: Colors.white,
                       ),
-                      const SizedBox(width: 12),
-                      RichText(
-                        text: TextSpan(
-                            text: 'I aggree to the',
-                            style: const TextStyle(
-                                color: Color(0xff65656B),
-                                fontFamily: sourceSansRegular),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: ' Terms of services',
-                                  style: const TextStyle(
-                                      color: Color(0xffF85F6A),
-                                      //  fontSize: 17,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: sourceSansRegular),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Get.to(const DownloadLogo());
-                                    }),
-                              TextSpan(
-                                  text: ' and\n',
-                                  style: const TextStyle(
-                                      color: Color(0xff65656B),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: sourceSansRegular),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // navigate to desired screen
-                                    }),
-                              TextSpan(
-                                  text: 'Privacy policy ',
-                                  style: const TextStyle(
-                                      color: Color(0xffF85F6A),
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.w400,
-                                      fontFamily: sourceSansRegular),
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      // navigate to desired screen
-                                    })
-                            ]),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 22,
+                  ),
+                  AppButton(
+                    radius: 6,
+                    color: const Color(0xffF85F6A),
+                    text: "Sign in",
+                    textColor: const Color(0xffFFFFFF),
+                    height: 53,
+                    width: double.infinity,
+                    onPressed: () async {},
+                  ),
+                  const SizedBox(
+                    height: 25,
+                  ),
+                  const Center(
+                    child: Text(
+                      'or use one of your social profiles',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: sourceSansRegular,
+                        color: Color.fromRGBO(101, 101, 107, 1),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 29,
+                  ),
+                  AppButton(
+                    radius: 6,
+                    color: const Color(0xff000000),
+                    img: 'assets/images/apple.svg',
+                    text: "Sign in with Apple",
+                    fontFamily: sourceSansSemiBold,
+                    textColor: const Color(0xffFFFFFF),
+                    height: 53,
+                    width: double.infinity,
+                    onPressed: () async {},
+                  ),
+                  const SizedBox(height: 14),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: AppButton(
+                          radius: 12,
+                          isLeftAlign: true,
+                          color: const Color(0xffFFFFFF),
+                          img: 'assets/images/gmail.svg',
+                          text: "Gmail",
+                          fontSize: 16,
+                          textColor: const Color(0xff000000),
+                          height: 53,
+                          width: MediaQuery.of(context).size.width * 0.44,
+                          onPressed: () async {},
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Expanded(
+                        child: AppButton(
+                          isLeftAlign: true,
+                          radius: 12,
+                          color: const Color(0xff0A66C2),
+                          img: 'assets/images/linkdin.svg',
+                          fontSize: 16,
+                          text: "LinkedIn",
+                          textColor: const Color(0xffFFFFFF),
+                          height: 53,
+                          width: MediaQuery.of(context).size.width * 0.44,
+                          onPressed: () async {},
+                        ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 29),
-                  AppButton(
-                    radius: 6,
-                    height: 53,
-                    color: const Color(0xffF85F6A),
-                    text: "Sign Up",
-                    textColor: const Color(0xffFFFFFF),
-                    width: double.infinity,
-                    onPressed: () async {
-                      Get.to(const MainCreatProfile());
-                    },
-                  ),
-                  const SizedBox(
-                    height: 27,
-                  ),
+                  const SizedBox(height: 25),
                   Center(
                     child: RichText(
                       text: TextSpan(
-                          text: 'Have an account?',
+                          text: 'Don’t have account',
                           style: const TextStyle(
                               color: Color(0xffC4C4C4),
                               fontFamily: sourceSansRegular),
                           children: <TextSpan>[
                             TextSpan(
-                                text: ' Sign In',
+                                text: ' Sign UP',
                                 style: const TextStyle(
                                     color: Color(0xffF85F6A),
                                     //  fontSize: 17,
-                                    fontWeight: FontWeight.w400,
+
                                     fontFamily: sourceSansRegular),
                                 recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    // navigate to desired screen
-                                  }),
+                                  ..onTap = () {}),
                           ]),
                     ),
                   ),
-                  // const SizedBox(height: 200),
                   SizedBox(
                     height: MediaQuery.of(context).viewInsets.bottom,
                   ),
@@ -281,3 +292,4 @@ class SignUp{
     );
   }
 }
+

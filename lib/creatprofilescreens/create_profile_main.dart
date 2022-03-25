@@ -157,6 +157,7 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
           ),
           Expanded(
               child: PageView(
+                physics: NeverScrollableScrollPhysics(),
             controller: pageController,
             onPageChanged: (index) => onPageChanged(index: index),
             children: [

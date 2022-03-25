@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import '../../Widget/app_button_widget.dart';
 import '../../Widget/input_field_widget.dart';
 import '../../strings/string.dart';
+import '../company_home_screen.dart';
 import 'magentopartner.dart';
 
 class Supplier extends StatefulWidget {
@@ -21,7 +22,7 @@ class _SupplierState extends State<Supplier> {
       appBar: AppBar(
         leading: GestureDetector(
           onTap: () {
-            Get.back();
+            companyScaffoldKey.currentState!.openDrawer();
           },
           child: const Padding(
               padding: EdgeInsets.only(left: 12.0),
@@ -227,60 +228,64 @@ class _SupplierState extends State<Supplier> {
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 28.0),
-        child: SingleChildScrollView(
-          child: Column(children: [
-            InPutFieldWidget(
-              prefixIcon: Padding(
-                padding: const EdgeInsets.only(
-                    left: 19.0, top: 24, bottom: 24, right: 14),
-                child: SvgPicture.asset(
-                  'assets/images/Search.svg',
-                  // height: 4.0,
-                  // width: 4.0,
-                  // allowDrawingOutsideViewBox: true,
-                ),
+        child: Column(children: [
+          InPutFieldWidget(
+            prefixIcon: Padding(
+              padding: const EdgeInsets.only(
+                  left: 19.0, top: 24, bottom: 24, right: 14),
+              child: SvgPicture.asset(
+                'assets/images/Search.svg',
+                // height: 4.0,
+                // width: 4.0,
+                // allowDrawingOutsideViewBox: true,
               ),
-              contentPadding: const EdgeInsets.only(
-                top: 23,
-                bottom: 23,
-                left: 18,
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderSide: const BorderSide(
-                  color: Color(0xff181829),
-                ),
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              fillcolor: const Color(0xff222232),
-              focusedBorder: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0xff222232)),
-                borderRadius: BorderRadius.circular(15.0),
-              ),
-              hintColor: const Color(0xff707070),
-              hint: 'Search by supplier business name',
-              keyboardType: TextInputType.text,
             ),
-            const SizedBox(height: 30),
-            SupplierTile(
-              ontap: () {
-                Get.to(const MagentoPartner());
-              },
+            contentPadding: const EdgeInsets.only(
+              top: 23,
+              bottom: 23,
+              left: 18,
             ),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-            const SupplierTile(),
-            const SizedBox(height: 8),
-          ]),
-        ),
+            enabledBorder: OutlineInputBorder(
+              borderSide: const BorderSide(
+                color: Color(0xff181829),
+              ),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            fillcolor: const Color(0xff222232),
+            focusedBorder: OutlineInputBorder(
+              borderSide: const BorderSide(color: Color(0xff222232)),
+              borderRadius: BorderRadius.circular(15.0),
+            ),
+            hintColor: const Color(0xff707070),
+            hint: 'Search by supplier business name',
+            keyboardType: TextInputType.text,
+          ),
+          Flexible(
+            child: ListView(
+              children: [
+                const SizedBox(height: 30),
+                SupplierTile(
+                  ontap: () {
+                    Get.to(const MagentoPartner());
+                  },
+                ),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+                const SupplierTile(),
+                const SizedBox(height: 8),
+              ],
+            ),
+          ),
+        ]),
       ),
     );
   }

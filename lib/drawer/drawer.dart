@@ -16,7 +16,7 @@ class _CustomDrawerAppState extends State<CustomDrawerApp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:const  Color(0xff181829),
-      body: SlideDrawer(
+      body: SlideDrawer( 
           isRotate: false,
           // offsetFromRight: MediaQuery.of(context).size.width / 2.8,
           child:const  CustomDrawerPageContent(),
