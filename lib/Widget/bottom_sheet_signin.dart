@@ -1,50 +1,49 @@
 import 'package:ethnicity/Widget/input_field_widget.dart';
+import 'package:ethnicity/strings/color_string.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 
+import '../Widget/bottom_sheet_signup.dart';
+import '../forgot_password/forgot_password.dart';
+import '../strings/font_string.dart';
 import '../strings/string.dart';
+import '../strings/text_string.dart';
 import 'app_button_widget.dart';
 
 class BottomSheetSignIn {
   customBottom(BuildContext context) {
-    bool isPassword = false;
+    bool isPassword = true;
     return showModalBottomSheet<void>(
       isScrollControlled: true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
-      backgroundColor: const Color(0xff222232),
+      backgroundColor: ColorString.bluelight,
       context: context,
       builder: (BuildContext context) {
         return StatefulBuilder(builder: ((context, setState) {
           return Container(
             height: MediaQuery.of(context).size.height / 1.3,
             decoration: const BoxDecoration(
-              color: Color(0xff222232),
+              color: ColorString.bluelight,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 topRight: Radius.circular(20),
               ),
             ),
-            // height: 900,
             child: SingleChildScrollView(
               padding: const EdgeInsets.only(left: 24.0, right: 24, top: 10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.start,
-                //  mainAxisSize: MainAxisSize.min,
                 children: [
                   Center(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffFFFFFF).withOpacity(0.10),
-
+                        color: Colors.white.withOpacity(0.10),
                         borderRadius: BorderRadius.circular(5),
-                        // shape: BoxShape.circle,
-                        // color: checkBoxValueTwo
-                        // ? const Color(0xff0A7302)
-                        // : const Color(0xff898A8A)
                       ),
                       height: 5,
                       width: 66,
@@ -54,12 +53,12 @@ class BottomSheetSignIn {
                     height: 24,
                   ),
                   const Text(
-                    "Sign In",
+                    TextString.signIn,
                     style: TextStyle(
-                      color: Color(0xffFFFFFF),
+                      color: Colors.white,
                       fontSize: 28,
                       fontWeight: FontWeight.w600,
-                      fontFamily: sourceSansRegular,
+                      fontFamily: Fonts.sourceSansRegular,
                     ),
                     maxLines: 1,
                     textAlign: TextAlign.center,
@@ -72,10 +71,7 @@ class BottomSheetSignIn {
                       padding: const EdgeInsets.only(
                           left: 19.0, top: 24, bottom: 24, right: 14),
                       child: SvgPicture.asset(
-                        'assets/images/message.svg',
-                        // height: 4.0,
-                        // width: 4.0,
-                        // allowDrawingOutsideViewBox: true,
+                        TextString.email,
                       ),
                     ),
                     contentPadding: const EdgeInsets.only(
@@ -84,31 +80,23 @@ class BottomSheetSignIn {
                       left: 18,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
-
-                    hintColor: const Color(0xff707070),
-                    //isPassword: true,
-                    hint: 'Email',
-                    //  labelText: 'E-Mail',
-                    //  validator: passwordValidator,
-
+                    hintColor: ColorString.lightGray,
+                    hint: TextString.emailText,
                     keyboardType: TextInputType.text,
-
-                    // onChanged: (String? value) {
-                    //   setState(() {
-                    //     password = value!;
-                    //   });
-                    // },
                   ),
                   const SizedBox(
                     height: 24,
@@ -118,10 +106,7 @@ class BottomSheetSignIn {
                       padding: const EdgeInsets.only(
                           left: 19.0, top: 24, bottom: 24, right: 14),
                       child: SvgPicture.asset(
-                        'assets/images/password.svg',
-                        // height: 4.0,
-                        // width: 4.0,
-                        // allowDrawingOutsideViewBox: true,
+                        TextString.passwordFieldImg,
                       ),
                     ),
                     contentPadding: const EdgeInsets.only(
@@ -130,49 +115,60 @@ class BottomSheetSignIn {
                       left: 18,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
-                      borderRadius: BorderRadius.circular(15.0),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
+                      borderRadius: BorderRadius.circular(8.0),
                     ),
-
                     hintColor: const Color(0xff707070),
                     isPassword: isPassword,
-                    hint: 'Password',
-                    //  labelText: 'E-Mail',
-                    //  validator: passwordValidator,
+                    hint: TextString.passwordText,
                     suffixIcon: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          isPassword = !isPassword;
-                        });
-                      },
-                      child: Icon(
-                        isPassword ? Icons.visibility : Icons.visibility_off,
-                        color: const Color(0xff9FA5BB),
-                      ),
-                    ),
+                        onTap: () {
+                          setState(() {
+                            isPassword = !isPassword;
+                          });
+                        },
+                        child: isPassword
+                            ? Padding(
+                                padding: const EdgeInsets.all(14.0),
+                                child: SvgPicture.asset(
+                                  TextString.eyeFieldImg,
+                                  height: 4.0,
+                                  width: 4.0,
+                                ),
+                              )
+                            : const Icon(
+                                Icons.visibility,
+                                color: Colors.grey,
+                              )),
                     keyboardType: TextInputType.text,
                   ),
                   const SizedBox(
                     height: 22,
                   ),
-                  const Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      'Forgot Password?',
-                      //textAlign: TextAlign.end,
-
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontFamily: sourceSansRegular,
-                        color: Colors.white,
+                  GestureDetector(
+                    onTap: () {
+                      Get.to(const ForgetPassword());
+                    },
+                    child: const Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        TextString.forgotPassword,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: Fonts.sourceSansRegular,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
@@ -181,9 +177,9 @@ class BottomSheetSignIn {
                   ),
                   AppButton(
                     radius: 6,
-                    color: const Color(0xffF85F6A),
-                    text: "Sign in",
-                    textColor: const Color(0xffFFFFFF),
+                    color: ColorString.buttonColor,
+                    text: TextString.signIn,
+                    textColor: Colors.white,
                     height: 53,
                     width: double.infinity,
                     onPressed: () async {},
@@ -193,12 +189,12 @@ class BottomSheetSignIn {
                   ),
                   const Center(
                     child: Text(
-                      'or use one of your social profiles',
+                      TextString.socialProfiles,
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 16,
-                        fontFamily: sourceSansRegular,
-                        color: Color.fromRGBO(101, 101, 107, 1),
+                        fontFamily: Fonts.sourceSansRegular,
+                        color: ColorString.gray,
                       ),
                     ),
                   ),
@@ -207,11 +203,11 @@ class BottomSheetSignIn {
                   ),
                   AppButton(
                     radius: 6,
-                    color: const Color(0xff000000),
-                    img: 'assets/images/apple.svg',
-                    text: "Sign in with Apple",
-                    fontFamily: sourceSansSemiBold,
-                    textColor: const Color(0xffFFFFFF),
+                    color: Colors.black,
+                    img: TextString.appleImage,
+                    text: TextString.appleSign,
+                    fontFamily: Fonts.sourceSansSemiBold,
+                    textColor: Colors.white,
                     height: 53,
                     width: double.infinity,
                     onPressed: () async {},
@@ -222,13 +218,13 @@ class BottomSheetSignIn {
                     children: [
                       Expanded(
                         child: AppButton(
-                          radius: 12,
+                          radius: 8,
                           isLeftAlign: true,
                           color: const Color(0xffFFFFFF),
-                          img: 'assets/images/gmail.svg',
-                          text: "Gmail",
+                          img: TextString.gmailImage,
+                          text: TextString.gmail,
                           fontSize: 16,
-                          textColor: const Color(0xff000000),
+                          textColor: Colors.black,
                           height: 53,
                           width: MediaQuery.of(context).size.width * 0.44,
                           onPressed: () async {},
@@ -240,12 +236,12 @@ class BottomSheetSignIn {
                       Expanded(
                         child: AppButton(
                           isLeftAlign: true,
-                          radius: 12,
-                          color: const Color(0xff0A66C2),
-                          img: 'assets/images/linkdin.svg',
+                          radius: 8,
+                          color: ColorString.skyblue,
+                          img: TextString.linkdinImage,
                           fontSize: 16,
-                          text: "LinkedIn",
-                          textColor: const Color(0xffFFFFFF),
+                          text: TextString.linkdin,
+                          textColor: Colors.white,
                           height: 53,
                           width: MediaQuery.of(context).size.width * 0.44,
                           onPressed: () async {},
@@ -257,20 +253,23 @@ class BottomSheetSignIn {
                   Center(
                     child: RichText(
                       text: TextSpan(
-                          text: 'Don’t have account?',
+                          text: TextString.haveAccount,
                           style: const TextStyle(
-                              color: Color(0xffC4C4C4),
+                              color: ColorString.extralightGray,
                               fontFamily: sourceSansRegular),
                           children: <TextSpan>[
                             TextSpan(
-                                text: ' Sign UP',
+                                text: TextString.signUp,
                                 style: const TextStyle(
-                                    color: Color(0xffF85F6A),
-                                    //  fontSize: 17,
+                                    color: ColorString.buttonColor,
+                              
 
                                     fontFamily: sourceSansRegular),
                                 recognizer: TapGestureRecognizer()
-                                  ..onTap = () {}),
+                                  ..onTap = () {
+                                    Navigator.of(context).pop();
+                                    SignUp().customBottomSignUp(context);
+                                  }),
                           ]),
                     ),
                   ),

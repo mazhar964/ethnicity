@@ -1,10 +1,13 @@
 import 'dart:io';
 
+import 'package:ethnicity/strings/color_string.dart';
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../Widget/app_button_widget.dart';
+import '../strings/font_string.dart';
+import '../strings/text_string.dart';
 
 class SetProfileImage extends StatefulWidget {
   const SetProfileImage(
@@ -46,12 +49,12 @@ class _SetProfileImageState extends State<SetProfileImage> {
             height: MediaQuery.of(context).size.height * 0.1366,
           ),
           const Text(
-            "Attach your\ncompany logo?",
+            TextString.setCompnyLogo,
             style: TextStyle(
-              color: Color(0xffFFFFFF),
+              color: Colors.white,
               fontSize: 24,
               fontWeight: FontWeight.w600,
-              fontFamily: sourceSansSemiBold,
+              fontFamily: Fonts.sourceSansSemiBold,
             ),
             maxLines: 2,
           ),
@@ -166,22 +169,17 @@ class _SetProfileImageState extends State<SetProfileImage> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(80),
                       border: Border.all(
-                        color: const Color(0xff222232),
+                        color: ColorString.bluelight,
                         style: BorderStyle.solid,
                         width: 3,
                       ),
-                      // image: const DecorationImage(
-                      //   image: AssetImage("assets/delogo.png"),
-                      //   fit: BoxFit.fill,
-                      // ),
-                      // shape: BoxShape.circle,
-                      color: const Color(0xff181829),
+                      color: ColorString.theamColor,
                     ),
                     child: image1 == null
                         ? const Center(
                             child: Icon(
                               Icons.business_outlined,
-                              color: Color(0xffF85F6A),
+                              color: ColorString.buttonColor,
                               size: 40,
                             ),
                           )
@@ -201,18 +199,12 @@ class _SetProfileImageState extends State<SetProfileImage> {
                     height: 38,
                     width: 38,
                     child: const ImageIcon(
-                      AssetImage("assets/images/Edit.png"),
+                      AssetImage(TextString.editImage),
                       color: Colors.white,
                       size: 25,
                     ),
-
-                    //  const Icon(
-                    //     Icons.add,
-                    //     color: Colors.black,
-                    //     size: 15,
-                    //   ),
                     decoration: BoxDecoration(
-                      color: const Color(0xffF85F6A),
+                      color: ColorString.buttonColor,
                       border: Border.all(
                         color: const Color(0xff181829),
                         style: BorderStyle.solid,
@@ -230,9 +222,9 @@ class _SetProfileImageState extends State<SetProfileImage> {
           ),
           AppButton(
             radius: 6,
-            color: const Color(0xffF85F6A),
-            text: "Next",
-            fontFamily: sourceSansSemiBold,
+            color: ColorString.buttonColor,
+            text: TextString.next,
+            fontFamily: Fonts.sourceSansSemiBold,
             textColor: const Color(0xffFFFFFF),
             height: 53,
             width: double.infinity,
@@ -243,9 +235,6 @@ class _SetProfileImageState extends State<SetProfileImage> {
               widget.pageController.animateToPage(2,
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);
-              // Get.to(
-
-              // );
             },
           ),
         ]),

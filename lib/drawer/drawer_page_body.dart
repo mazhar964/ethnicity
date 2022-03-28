@@ -56,7 +56,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
             children: [
               const SizedBox(height: 20),
               Row(
-                children: const  [
+                children: const [
                   Expanded(
                       child: IndividualTile(
                     totalIndividual: '205',
@@ -516,7 +516,7 @@ class BarChatTile extends StatelessWidget {
         ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(3)),
           child: LinearProgressIndicator(
-            minHeight: 40,
+            minHeight: 35,
             value: value,
             backgroundColor: const Color(0xffF85F6A).withOpacity(0.10),
             valueColor: const AlwaysStoppedAnimation<Color>(

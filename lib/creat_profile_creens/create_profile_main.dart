@@ -1,7 +1,9 @@
-import 'package:ethnicity/creatprofilescreens/seniority_levels.dart';
-import 'package:ethnicity/creatprofilescreens/set_name.dart';
-import 'package:ethnicity/creatprofilescreens/setprofile_image.dart';
+import 'package:ethnicity/creat_profile_creens/seniority_levels.dart';
+import 'package:ethnicity/creat_profile_creens/set_name.dart';
+import 'package:ethnicity/creat_profile_creens/setprofile_image.dart';
+import 'package:ethnicity/strings/color_string.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'ethnicity_stats.dart';
 import 'gender_information.dart';
@@ -41,11 +43,15 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
               children: [
                 GestureDetector(
                   onTap: () {
+                    if (selectedIndex == 0) {
+                      Get.back();
+                    }
                     selectedIndex--;
                     setState(() {});
                     pageController!.animateToPage(selectedIndex,
                         duration: const Duration(milliseconds: 500),
                         curve: Curves.easeIn);
+                    FocusScope.of(context).requestFocus(FocusNode());
                   },
                   child: Container(
                     height: 51,
@@ -73,8 +79,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 0
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 0 ? 18 : 12,
@@ -87,8 +93,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 1
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 1 ? 18 : 12,
@@ -101,8 +107,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 2
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 2 ? 18 : 12,
@@ -115,8 +121,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 3
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 3 ? 18 : 12,
@@ -129,8 +135,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 4
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 4 ? 18 : 12,
@@ -143,8 +149,8 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
                         // color:  const Color(0xffD4D6F6),
                         borderRadius: BorderRadius.circular(6),
                         color: selectedIndex == 5
-                            ? const Color(0xffE74B99)
-                            : const Color(0xffD4D6F6),
+                            ? ColorString.buttonColor
+                            : ColorString.lightWhite,
                       ),
                       height: 4,
                       width: selectedIndex == 5 ? 18 : 12,
@@ -157,7 +163,7 @@ class _MainCreatProfileState extends State<MainCreatProfile> {
           ),
           Expanded(
               child: PageView(
-                physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             controller: pageController,
             onPageChanged: (index) => onPageChanged(index: index),
             children: [

@@ -112,7 +112,7 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                 // iconColor: Colors.white,
 
                 imageUrl: 'assets/images/home.png',
-                imgColor: Colors.white,
+                imgColor: selectedindex == 0 ? Colors.white : Color(0xff9FA5BB),
                 title: 'Home',
                 textColor:
                     selectedindex == 0 ? Colors.white : Color(0xff9FA5BB),
@@ -127,6 +127,7 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                 },
                 title: 'Suppliers ',
                 imageUrl: 'assets/images/supply.png',
+                imgColor: selectedindex == 1 ? Colors.white : Color(0xff9FA5BB),
                 textColor:
                     selectedindex == 1 ? Colors.white : Color(0xff9FA5BB),
               ),
@@ -140,6 +141,7 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
                 imageUrl: 'assets/images/payment.png',
+                imgColor: selectedindex == 2 ? Colors.white : Color(0xff9FA5BB),
                 textColor:
                     selectedindex == 2 ? Colors.white : Color(0xff9FA5BB),
                 title: 'Payments',
@@ -151,9 +153,13 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
                 imageUrl: 'assets/images/support.png',
+                imgColor: selectedindex == 3 ? Colors.white : Color(0xff9FA5BB),
                 title: 'Support',
+                textColor:
+                    selectedindex == 3 ? Colors.white : Color(0xff9FA5BB),
               ),
               const Spacer(),
+
               DrawerRowWidget(
                 onTap: () {
                   companyScaffoldKey.currentState!.openEndDrawer();
@@ -163,7 +169,7 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                 textColor: const Color(0xffD1160F),
                 imgColor: const Color(0xffD1160F),
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.1),
+              const SizedBox(height: 45),
               // const SizedBox(height: 50),
             ],
           ),

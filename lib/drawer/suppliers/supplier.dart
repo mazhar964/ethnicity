@@ -183,7 +183,7 @@ class _SupplierState extends State<Supplier> {
                                 color: const Color(0xffF85F6A),
                                 text: "Send Invite",
                                 textColor: const Color(0xffFFFFFF),
-                                height: 40,
+                                height: 48,
                                 width: 220,
                                 onPressed: () {
                                   // Navigator.pushReplacement(

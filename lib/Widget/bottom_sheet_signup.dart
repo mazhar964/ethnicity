@@ -1,13 +1,18 @@
+import 'package:ethnicity/strings/color_string.dart';
+import 'package:ethnicity/strings/text_string.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../creatprofilescreens/create_profile_main.dart';
-import '../logodownload/download_logo.dart';
+
+import '../creat_profile_creens/create_profile_main.dart';
+import '../logo_download/download_logo.dart';
+import '../strings/font_string.dart';
 import '../strings/string.dart';
 import '../widget/app_button_widget.dart';
 import '../widget/input_field_widget.dart';
+import 'bottom_sheet_signin.dart';
 
 class SignUp {
   customBottomSignUp(BuildContext context) {
@@ -26,7 +31,7 @@ class SignUp {
           return Container(
             height: MediaQuery.of(context).size.height / 1.46,
             decoration: const BoxDecoration(
-              color: Color(0xff222232),
+              color: ColorString.bluelight,
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
                 topRight: Radius.circular(20),
@@ -43,7 +48,7 @@ class SignUp {
                   Center(
                     child: Container(
                       decoration: BoxDecoration(
-                        color: const Color(0xffFFFFFF).withOpacity(0.10),
+                        color: Colors.white.withOpacity(0.10),
                         borderRadius: BorderRadius.circular(5),
                       ),
                       height: 5,
@@ -54,12 +59,12 @@ class SignUp {
                     height: 30,
                   ),
                   const Text(
-                    "Sign Up",
+                    TextString.signUp,
                     style: TextStyle(
-                      color: Color(0xffFFFFFF),
+                      color: Colors.white,
                       fontSize: 28,
                       fontWeight: FontWeight.w600,
-                      fontFamily: sourceSansRegular,
+                      fontFamily: Fonts.sourceSansRegular,
                     ),
                     maxLines: 1,
                     textAlign: TextAlign.center,
@@ -72,10 +77,7 @@ class SignUp {
                       padding: const EdgeInsets.only(
                           left: 19.0, top: 24, bottom: 24, right: 14),
                       child: SvgPicture.asset(
-                        'assets/images/message.svg',
-                        // height: 4.0,
-                        // width: 4.0,
-                        // allowDrawingOutsideViewBox: true,
+                        TextString.email,
                       ),
                     ),
                     contentPadding: const EdgeInsets.only(
@@ -84,19 +86,22 @@ class SignUp {
                       left: 18,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-                    hintColor: const Color(0xff707070),
-                    hint: 'Email',
+                    hintColor: ColorString.lightGray,
+                    hint: TextString.emailText,
                     keyboardType: TextInputType.text,
                   ),
                   const SizedBox(
@@ -107,10 +112,7 @@ class SignUp {
                       padding: const EdgeInsets.only(
                           left: 19.0, top: 24, bottom: 24, right: 14),
                       child: SvgPicture.asset(
-                        'assets/images/password.svg',
-                        // height: 4.0,
-                        // width: 4.0,
-                        // allowDrawingOutsideViewBox: true,
+                        TextString.passwordFieldImg,
                       ),
                     ),
                     contentPadding: const EdgeInsets.only(
@@ -119,41 +121,44 @@ class SignUp {
                       left: 18,
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     border: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Color(0xff222232)),
+                      borderSide:
+                          const BorderSide(color: ColorString.bluelight),
                       borderRadius: BorderRadius.circular(8.0),
                     ),
-
-                    hintColor: const Color(0xff707070),
+                    hintColor: ColorString.lightGray,
                     isPassword: isPassword,
-                    hint: 'Password',
-                    //  labelText: 'E-Mail',
-                    //  validator: passwordValidator,
+                    hint: TextString.passwordText,
                     suffixIcon: GestureDetector(
                       onTap: () {
                         setState(() {
                           isPassword = !isPassword;
                         });
                       },
-                      child: Icon(
-                        isPassword ? Icons.visibility : Icons.visibility_off,
-                        color: const Color(0xff9FA5BB),
-                      ),
+                      child: isPassword
+                          ? Padding(
+                              padding: const EdgeInsets.all(14.0),
+                              child: SvgPicture.asset(
+                                TextString.eyeFieldImg,
+                                height: 4.0,
+                                width: 4.0,
+                              ),
+                            )
+                          : const Icon(
+                              Icons.visibility,
+                              color: Colors.grey,
+                            ),
                     ),
                     keyboardType: TextInputType.text,
-
-                    // onChanged: (String? value) {
-                    //   setState(() {
-                    //     password = value!;
-                    //   });
-                    // },
                   ),
                   const SizedBox(
                     height: 24,
@@ -171,7 +176,7 @@ class SignUp {
                             width: 19,
                             decoration: BoxDecoration(
                               border: Border.all(
-                                color: const Color(0xff65656B),
+                                color: ColorString.gray,
                                 width: 1,
                               ),
                               borderRadius: BorderRadius.circular(6),
@@ -233,12 +238,12 @@ class SignUp {
                   AppButton(
                     radius: 6,
                     height: 53,
-                    color: const Color(0xffF85F6A),
-                    text: "Sign Up",
-                    textColor: const Color(0xffFFFFFF),
+                    color: ColorString.buttonColor,
+                    text: TextString.signUp,
+                    textColor: Colors.white,
                     width: double.infinity,
                     onPressed: () async {
-                      Get.offAll(const MainCreatProfile());
+                      Get.to(const MainCreatProfile());
                     },
                   ),
                   const SizedBox(
@@ -247,21 +252,22 @@ class SignUp {
                   Center(
                     child: RichText(
                       text: TextSpan(
-                          text: 'Have an account?',
+                          text: TextString.anaccount,
                           style: const TextStyle(
-                              color: Color(0xffC4C4C4),
-                              fontFamily: sourceSansRegular),
+                              color: ColorString.extralightGray,
+                              fontFamily: Fonts.sourceSansRegular),
                           children: <TextSpan>[
                             TextSpan(
-                                text: ' Sign In',
+                                text: TextString.signIn,
                                 style: const TextStyle(
-                                    color: Color(0xffF85F6A),
+                                    color: ColorString.buttonColor,
                                     //  fontSize: 17,
                                     fontWeight: FontWeight.w400,
-                                    fontFamily: sourceSansRegular),
+                                    fontFamily: Fonts.sourceSansRegular),
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    // navigate to desired screen
+                                    Navigator.of(context).pop();
+                                    BottomSheetSignIn().customBottom(context);
                                   }),
                           ]),
                     ),

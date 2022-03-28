@@ -1,8 +1,8 @@
-import 'package:ethnicity/splashScreen/splash_screen_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../strings/string.dart';
+import 'splash_screen_controller.dart';
 
 class SplashScreen extends StatelessWidget {
   SplashScreen({Key? key}) : super(key: key);

@@ -719,6 +719,7 @@ class _SeniorityLevelState extends State<SeniorityLevel> {
               //             duration: const Duration(milliseconds: 500),
               //             curve: Curves.easeIn);
               Get.offAll(const CompanyHmeScreen());
+              FocusScope.of(context).requestFocus(FocusNode());
             },
           ),
           const SizedBox(height: 40),

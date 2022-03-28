@@ -1,4 +1,5 @@
-import 'package:ethnicity/splashScreen/splash_screen.dart';
+import 'package:ethnicity/splash_Screen/splash_screen.dart';
+import 'package:ethnicity/strings/color_string.dart';
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(
               fontFamily: sourceSansRegular,
             ),
-        scaffoldBackgroundColor: const Color(0xff181829),
+        scaffoldBackgroundColor: ColorString.theamColor,
       ),
       home: SplashScreen(),
     );
