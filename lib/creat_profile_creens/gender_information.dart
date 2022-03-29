@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
-
+import '../strings/color_string.dart';
+import '../strings/font_string.dart';
+import '../strings/text_string.dart';
 
 class GenderInformation extends StatefulWidget {
   const GenderInformation(
@@ -33,19 +35,19 @@ class _GenderInformationState extends State<GenderInformation> {
               height: MediaQuery.of(context).size.height * 0.1034,
             ),
             const Text(
-              "Fill in gender information",
+              TextString.genderInformation,
               style: TextStyle(
-                color: Color(0xffFFFFFF),
+                color: Colors.white,
                 fontSize: 24,
-                fontFamily: sourceSansSemiBold,
+                fontFamily: Fonts.sourceSansSemiBold,
               ),
               maxLines: 2,
             ),
             const SizedBox(height: 8),
             const Text(
-              "Give count below",
+              TextString.countBelow,
               style: TextStyle(
-                color: Color(0xff65656B),
+                color: ColorString.gray,
                 fontSize: 16,
                 fontFamily: sourceSansRegular,
               ),
@@ -53,29 +55,21 @@ class _GenderInformationState extends State<GenderInformation> {
             ),
             const SizedBox(height: 19),
             InPutFieldWidget(
-            
-
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-              
+              hintColor: Colors.white.withOpacity(0.50),
               hint: 'Man',
               hintfontSize: 16,
-
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 19),
             InPutFieldWidget(
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-             
+              hintColor: Colors.white.withOpacity(0.50),
               hint: 'Woman',
               hintfontSize: 16,
-
               keyboardType: TextInputType.number,
             ),
             const SizedBox(height: 19),
             InPutFieldWidget(
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
+              hintColor: Colors.white.withOpacity(0.50),
 
               //isPassword: isPassword,
               hint: 'Non-binary',
@@ -85,7 +79,7 @@ class _GenderInformationState extends State<GenderInformation> {
             ),
             const SizedBox(height: 19),
             InPutFieldWidget(
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
+              hintColor: Colors.white.withOpacity(0.50),
               hint: 'Gender fluid ',
               hintfontSize: 16,
               keyboardType: TextInputType.number,
@@ -93,11 +87,11 @@ class _GenderInformationState extends State<GenderInformation> {
             const SizedBox(height: 19),
             InPutFieldWidget(
               border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0xff979797)),
+                borderSide: const BorderSide(color: ColorString.thinlightgray),
                 borderRadius: BorderRadius.circular(5.0),
               ),
 
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
+              hintColor: Colors.white.withOpacity(0.50),
 
               //isPassword: isPassword,
               hint: 'Transgender',
@@ -108,17 +102,12 @@ class _GenderInformationState extends State<GenderInformation> {
             const SizedBox(height: 19),
             InPutFieldWidget(
               border: OutlineInputBorder(
-                borderSide: const BorderSide(color: Color(0xff979797)),
+                borderSide: const BorderSide(color: ColorString.thinlightgray),
                 borderRadius: BorderRadius.circular(5.0),
               ),
-
-              hintColor: const Color(0xffFFFFFF).withOpacity(0.50),
-
-
+              hintColor: Colors.white.withOpacity(0.50),
               hint: 'Prefer not to say ',
               hintfontSize: 16,
-
-             
               keyboardType: TextInputType.number,
             ),
             const SizedBox(
@@ -126,9 +115,9 @@ class _GenderInformationState extends State<GenderInformation> {
             ),
             AppButton(
               radius: 6,
-              color: const Color(0xffF85F6A),
+              color: ColorString.buttonColor,
               text: "Next",
-              fontFamily: sourceSansSemiBold,
+              fontFamily: Fonts.sourceSansSemiBold,
               textColor: const Color(0xffFFFFFF),
               height: 53,
               width: double.infinity,
@@ -139,7 +128,7 @@ class _GenderInformationState extends State<GenderInformation> {
                 widget.pageController.animateToPage(4,
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.easeIn);
-                     FocusScope.of(context).requestFocus(FocusNode());
+                FocusScope.of(context).requestFocus(FocusNode());
               },
             ),
           ]),

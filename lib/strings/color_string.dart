@@ -12,6 +12,13 @@ class ColorString {
   static const Color skyblue = Color(0xff0A66C2);
   static const Color lightWhite = Color(0xffD4D6F6);
   //set logo color
+  static const Color thinlightgray = Color(0xff979797);
+  static const Color lightWhitr = Color(0xff9FA5BB);
+  static const Color extraRed = Color(0xffD1160F);
+  static const Color lightYellow = Color(0xffFBBB00);
+  static const Color highYellow = Color(0xffFA7700);
+  static const Color extraYellow = Color(0xff977000);
+  
 
 
 

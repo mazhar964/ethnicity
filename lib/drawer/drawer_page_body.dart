@@ -1,7 +1,10 @@
+import 'package:ethnicity/strings/color_string.dart';
 import 'package:ethnicity/strings/string.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
+import '../strings/font_string.dart';
+import '../strings/text_string.dart';
 import '../widget/individual_widget.dart';
 import 'company_home_screen.dart';
 
@@ -75,7 +78,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
               const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xff222232),
+                  color: ColorString.bluelight,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Padding(
@@ -88,7 +91,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                           "Ethnicity stats",
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xffFFFFFF),
+                            color: Colors.white,
                             fontFamily: ibmPlexRegular,
                           ),
                         ),
@@ -106,8 +109,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               "Fantech Labs",
                               style: TextStyle(
-                                  color: Color(0xff979797),
-                                  fontFamily: sourceSansRegular,
+                                  color: ColorString.thinlightgray,
+                                  fontFamily: Fonts.sourceSansRegular,
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14),
                             ),
@@ -137,7 +140,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffFBBB00),
+                                color: ColorString.lightYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -146,15 +149,15 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'White & Asians',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.ibmPlexRegular,
                               ),
                             ),
                             const SizedBox(width: 30),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffFA7700),
+                                color: ColorString.highYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -163,8 +166,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'Pakistani',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.sourceSansRegular,
                               ),
                             ),
                           ],
@@ -175,7 +178,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xff977000),
+                                color: ColorString.highYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -184,15 +187,15 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'White Scottish',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.sourceSansRegular,
                               ),
                             ),
                             const SizedBox(width: 30),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffF85F6A),
+                                color: ColorString.buttonColor,
                               ),
                               height: 4,
                               width: 18,
@@ -201,8 +204,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'Black Caribbean',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.sourceSansRegular,
                               ),
                             ),
                           ],
@@ -213,7 +216,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
               const SizedBox(height: 20),
               Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xff222232),
+                  color: ColorString.bluelight,
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Padding(
@@ -223,11 +226,11 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text(
-                          "Employees level of seniority ",
+                          TextString.levelSeniority,
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xffFFFFFF),
-                            fontFamily: ibmPlexRegular,
+                            color: Colors.white,
+                            fontFamily: Fonts.ibmPlexRegular,
                           ),
                         ),
                         const SizedBox(height: 19),
@@ -236,19 +239,19 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                           children: [
                             Icon(
                               Icons.arrow_back_ios_outlined,
-                              color: const Color(0xffFFFFFF).withOpacity(0.83),
+                              color: Colors.white.withOpacity(0.83),
                               size: 16,
                             ),
                             const Text(
-                              "Directors",
+                              TextString.directors,
                               style: TextStyle(
-                                  color: Color(0xffFFFFFF),
-                                  fontFamily: sourceSansSemiBold,
+                                  color: Colors.white,
+                                  fontFamily: Fonts.sourceSansSemiBold,
                                   fontSize: 18),
                             ),
                             Icon(
                               Icons.arrow_forward_ios_outlined,
-                              color: const Color(0xffFFFFFF).withOpacity(0.83),
+                              color: Colors.white.withOpacity(0.83),
                               size: 16,
                             ),
                           ],
@@ -275,7 +278,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffFBBB00),
+                                color: ColorString.lightYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -284,15 +287,15 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'White & Asians',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.sourceSansRegular,
                               ),
                             ),
                             const SizedBox(width: 30),
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffFA7700),
+                                color: ColorString.highYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -301,7 +304,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'Pakistani',
                               style: TextStyle(
-                                color: Color(0xff979797),
+                                color: ColorString.thinlightgray,
                                 fontFamily: sourceSansRegular,
                               ),
                             ),
@@ -313,7 +316,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xff977000),
+                                color: ColorString.extraYellow,
                               ),
                               height: 4,
                               width: 18,
@@ -322,7 +325,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'White Scottish',
                               style: TextStyle(
-                                color: Color(0xff979797),
+                                color: ColorString.thinlightgray,
                                 fontFamily: sourceSansRegular,
                               ),
                             ),
@@ -330,7 +333,7 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             Container(
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(6),
-                                color: const Color(0xffF85F6A),
+                                color: ColorString.buttonColor,
                               ),
                               height: 4,
                               width: 18,
@@ -339,8 +342,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               'Black Caribbean',
                               style: TextStyle(
-                                color: Color(0xff979797),
-                                fontFamily: sourceSansRegular,
+                                color: ColorString.thinlightgray,
+                                fontFamily: Fonts.sourceSansRegular,
                               ),
                             ),
                           ],
@@ -364,8 +367,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                           "Ethnicity stats",
                           style: TextStyle(
                             fontSize: 16,
-                            color: Color(0xffFFFFFF),
-                            fontFamily: ibmPlexRegular,
+                            color: Colors.white,
+                            fontFamily: Fonts.ibmPlexRegular,
                           ),
                         ),
                         const SizedBox(height: 4),
@@ -382,8 +385,8 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
                             const Text(
                               "Fantech Labs",
                               style: TextStyle(
-                                  color: Color(0xff979797),
-                                  fontFamily: sourceSansRegular,
+                                  color: ColorString.thinlightgray,
+                                  fontFamily: Fonts.sourceSansRegular,
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14),
                             ),
@@ -449,48 +452,48 @@ class _CustomDrawerPageContentState extends State<CustomDrawerPageContent> {
       switch (i) {
         case 0:
           return PieChartSectionData(
-              color: const Color(0xffFBBB00),
+              color: ColorString.lightYellow,
               value: 72,
               title: '70%',
               radius: radius,
               titleStyle: const TextStyle(
                 fontSize: fontSize,
-                fontFamily: sourceSansRegular,
-                color: Color(0xffffffff),
+                fontFamily: Fonts.sourceSansRegular,
+                color: Colors.white,
               ));
         case 1:
           return PieChartSectionData(
-              color: const Color(0xffF85F6A),
+              color: ColorString.buttonColor,
               value: 15,
               title: '10%',
               radius: radius,
               titleStyle: const TextStyle(
                 fontSize: fontSize,
                 fontWeight: FontWeight.bold,
-                color: Color(0xffffffff),
+                color: Colors.white,
               ));
         case 2:
           return PieChartSectionData(
-            color: const Color(0xff977000),
+            color: ColorString.extraYellow,
             value: 15,
             title: '10%',
             radius: radius,
             titleStyle: const TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: Colors.white,
             ),
           );
         case 3:
           return PieChartSectionData(
-            color: const Color(0xffFA7700),
+            color: ColorString.highYellow,
             value: 15,
             title: '10%',
             radius: radius,
             titleStyle: const TextStyle(
               fontSize: fontSize,
               fontWeight: FontWeight.bold,
-              color: Color(0xffffffff),
+              color: Colors.white,
             ),
           );
         default:
@@ -518,9 +521,9 @@ class BarChatTile extends StatelessWidget {
           child: LinearProgressIndicator(
             minHeight: 35,
             value: value,
-            backgroundColor: const Color(0xffF85F6A).withOpacity(0.10),
+            backgroundColor: ColorString.buttonColor.withOpacity(0.10),
             valueColor: const AlwaysStoppedAnimation<Color>(
-              Color(0xffF85F6A),
+              ColorString.buttonColor,
             ),
           ),
         ),
@@ -529,7 +532,7 @@ class BarChatTile extends StatelessWidget {
           child: Text(
             text,
             style: const TextStyle(
-                color: Color(0xffFFFFFF),
+                color: Colors.white,
                 fontFamily: sourceSansRegular,
                 fontWeight: FontWeight.w400,
                 fontSize: 14),

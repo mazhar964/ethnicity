@@ -1,4 +1,6 @@
 import 'package:ethnicity/drawer/payment/payment.dart';
+import 'package:ethnicity/strings/color_string.dart';
+import 'package:ethnicity/strings/text_string.dart';
 
 import 'package:flutter/material.dart';
 
@@ -53,14 +55,9 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                     Container(
                         height: 30,
                         width: 26,
-                        decoration: const BoxDecoration(
-                            //  color: const Color(0xff222232),
-
-                            //  borderRadius: BorderRadius.circular(12),
-
-                            ),
+                        decoration: const BoxDecoration(),
                         child: Image.asset(
-                          'assets/images/fanlogo.png',
+                          TextString.fanlogo,
                           height: 30,
                           width: 26,
                         )),
@@ -99,7 +96,6 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 77),
               DrawerRowWidget(
                 onTap: () {
@@ -108,14 +104,12 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   });
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
-                // iconData: Icons.home_outlined,
-                // iconColor: Colors.white,
-
-                imageUrl: 'assets/images/home.png',
-                imgColor: selectedindex == 0 ? Colors.white : Color(0xff9FA5BB),
-                title: 'Home',
+                imageUrl: TextString.homelogo,
+                imgColor:
+                    selectedindex == 0 ? Colors.white : ColorString.lightWhite,
+                title: TextString.home,
                 textColor:
-                    selectedindex == 0 ? Colors.white : Color(0xff9FA5BB),
+                    selectedindex == 0 ? Colors.white : ColorString.lightWhite,
               ),
               const SizedBox(height: 33),
               DrawerRowWidget(
@@ -125,13 +119,13 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   });
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
-                title: 'Suppliers ',
-                imageUrl: 'assets/images/supply.png',
-                imgColor: selectedindex == 1 ? Colors.white : Color(0xff9FA5BB),
+                title: TextString.suppliers,
+                imageUrl: TextString.supplyLogo,
+                imgColor:
+                    selectedindex == 1 ? Colors.white : ColorString.lightWhite,
                 textColor:
-                    selectedindex == 1 ? Colors.white : Color(0xff9FA5BB),
+                    selectedindex == 1 ? Colors.white : ColorString.lightWhite,
               ),
-
               const SizedBox(height: 33),
               DrawerRowWidget(
                 onTap: () {
@@ -140,37 +134,36 @@ class _CompanyHmeScreenState extends State<CompanyHmeScreen> {
                   });
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
-                imageUrl: 'assets/images/payment.png',
-                imgColor: selectedindex == 2 ? Colors.white : Color(0xff9FA5BB),
+                imageUrl: TextString.paymentLogo,
+                imgColor:
+                    selectedindex == 2 ? Colors.white : ColorString.lightWhite,
                 textColor:
-                    selectedindex == 2 ? Colors.white : Color(0xff9FA5BB),
-                title: 'Payments',
+                    selectedindex == 2 ? Colors.white : ColorString.lightWhite,
+                title: TextString.payments,
               ),
-
               const SizedBox(height: 33),
               DrawerRowWidget(
                 onTap: () {
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
-                imageUrl: 'assets/images/support.png',
-                imgColor: selectedindex == 3 ? Colors.white : Color(0xff9FA5BB),
-                title: 'Support',
+                imageUrl: TextString.supportLogo,
+                imgColor:
+                    selectedindex == 3 ? Colors.white : ColorString.lightWhite,
+                title: TextString.support,
                 textColor:
-                    selectedindex == 3 ? Colors.white : Color(0xff9FA5BB),
+                    selectedindex == 3 ? Colors.white : ColorString.lightWhite,
               ),
               const Spacer(),
-
               DrawerRowWidget(
                 onTap: () {
                   companyScaffoldKey.currentState!.openEndDrawer();
                 },
-                imageUrl: 'assets/images/signout.png',
-                title: 'Sign Out',
-                textColor: const Color(0xffD1160F),
-                imgColor: const Color(0xffD1160F),
+                imageUrl: TextString.signoutLogo,
+                title: TextString.signUp,
+                textColor: ColorString.extraRed,
+                imgColor: ColorString.extraRed,
               ),
               const SizedBox(height: 45),
-              // const SizedBox(height: 50),
             ],
           ),
         ),

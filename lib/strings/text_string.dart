@@ -9,9 +9,9 @@ class TextString {
   static const String welcomeImage = "assets/images/Group.png";
   static const String email = 'assets/images/message.svg';
   static const String emailText = 'Email';
-  static const String passwordFieldImg = 'assets/images/message.svg';
+  static const String passwordFieldImg = 'assets/images/password.svg';
   static const String passwordText = 'Password';
-  static const String eyeFieldImg = 'assets/images/message.svg';
+  static const String eyeFieldImg = 'assets/images/Hide.svg';
   static const String forgotPassword = 'Forgot Password?';
   static const String socialProfiles = 'or use one of your social profiles';
   static const String appleSign = "Sign in with Apple";
@@ -32,9 +32,27 @@ class TextString {
   static const String setCompnyLogo = "Attach your\ncompany logo?";
   static const String editImage = 'assets/images/Edit.png';
   //no of employee screens
- static const String noOfEmployees ="How many employees does\nyour company have?";
- static const String totalCount ='Give a total count';
+  static const String noOfEmployees =
+      "How many employees does\nyour company have?";
+  static const String totalCount = 'Give a total count';
+  //fill gender information
+  static const String genderInformation = "Fill in gender information";
+  static const String countBelow = "Give count below";
+  // compny home screens
+  static const String fanlogo = 'assets/images/fanlogo.png';
+  static const String homelogo = 'assets/images/home.png';
+  static const String homeText = 'assets/images/home.png';
+  static const String home = 'Home';
+  static const String supplyLogo = 'assets/images/supply.png';
 
+  static const String suppliers = 'Suppliers ';
+  static const String paymentLogo = 'assets/images/payment.png';
+  static const String payments = 'Payments';
+  static const String supportLogo = 'assets/images/support.png';
+  static const String support = 'Support';
+  static const String signoutLogo = 'assets/images/signout.png';
 
-
+  //drawer home String
+  static const String levelSeniority = "Employees level of seniority ";
+  static const String directors = "Directors";
 }
