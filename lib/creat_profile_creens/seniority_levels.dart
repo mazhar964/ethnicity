@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
 import '../drawer/company_home_screen.dart';
-import '../drawer/drawer.dart';
 import '../strings/string.dart';
 
 // ignore: must_be_immutable
