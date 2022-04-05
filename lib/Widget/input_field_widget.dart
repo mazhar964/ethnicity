@@ -21,7 +21,9 @@ class InPutFieldWidget extends StatelessWidget {
     this.hintfontSize,
     this.width,
     this.enabledBorder,
-    this.focusedBorder, this.fillcolor,
+    this.focusedBorder,
+    this.fillcolor,
+    this.height,
   }) : super(key: key);
 
   final String hint, labelText;
@@ -42,13 +44,14 @@ class InPutFieldWidget extends StatelessWidget {
   final InputBorder? enabledBorder;
   final InputBorder? focusedBorder;
   final Color? fillcolor;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
+      height: height,
       child: TextFormField(
-        //expands: true,
         cursorColor: const Color(0xff65656B),
         style: const TextStyle(
             color: Color(0xffFFFFFF), fontFamily: sourceSansRegular),
@@ -59,7 +62,7 @@ class InPutFieldWidget extends StatelessWidget {
         textCapitalization: textCapitalization,
         keyboardType: keyboardType ?? TextInputType.text,
         decoration: InputDecoration(
-          fillColor:fillcolor?? const Color(0xff181829),
+          fillColor: fillcolor ?? const Color(0xff181829),
           filled: true,
           prefixIcon: prefixIcon,
           suffixIcon: suffixIcon,
@@ -73,6 +76,7 @@ class InPutFieldWidget extends StatelessWidget {
                 borderSide: const BorderSide(width: 1.5, color: Colors.white),
                 borderRadius: BorderRadius.circular(4.0),
               ),
+
           enabledBorder: enabledBorder ??
               OutlineInputBorder(
                 borderSide: const BorderSide(

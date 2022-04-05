@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "814752782074",
+    "project_id": "ethni-gen",
+    "storage_bucket": "ethni-gen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:814752782074:android:10b3f9ce39bb541d131b43",
+        "android_client_info": {
+          "package_name": "com.example.ethnicity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "814752782074-r35mkisva4nnp9b1vhsnvvo6ss2puc64.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ethnicity",
+            "certificate_hash": "4cb6a580900a25e7ab47f975bd8103a3f4b81dfb"
+          }
+        },
+        {
+          "client_id": "814752782074-7a697qn1piiv40o3v8mm350fafqpdane.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAStABj1TyyvMsSmRH8M_IJJ5E6nYQincg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "814752782074-7a697qn1piiv40o3v8mm350fafqpdane.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "814752782074-trm58uig622kv4jhobt9nfs47j54lvhu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ethnicity"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
