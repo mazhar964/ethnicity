@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
+import '../auth_services/auth.dart';
 import '../strings/color_string.dart';
 import '../strings/font_string.dart';
 import '../strings/text_string.dart';
@@ -17,6 +19,7 @@ class NoEmployees extends StatefulWidget {
 }
 
 class _NoEmployeesState extends State<NoEmployees> {
+  var employee = "";
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -41,6 +44,11 @@ class _NoEmployeesState extends State<NoEmployees> {
               maxLines: 2,
             ),
             InPutFieldWidget(
+              onChanged: (String? value) {
+                setState(() {
+                  employee = value!;
+                });
+              },
               border: UnderlineInputBorder(
                 borderSide: BorderSide(
                     color: ColorString.extralightGray.withOpacity(0.33),
@@ -77,6 +85,13 @@ class _NoEmployeesState extends State<NoEmployees> {
                 setState(() {
                   widget.selectedIndex != 3;
                 });
+                // AuthService.currentUser?.employee = employee;
+
+                // await FirebaseFirestore.instance
+                //     .doc("users/${AuthService.currentUser?.uid}")
+                //     .update({'employee': AuthService.currentUser?.employee});
+                // // Go.to(context, const CreateProfileImg());
+
                 widget.pageController.animateToPage(3,
                     duration: const Duration(milliseconds: 500),
                     curve: Curves.easeIn);

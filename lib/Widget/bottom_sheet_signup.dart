@@ -15,17 +15,21 @@ import '../widget/input_field_widget.dart';
 import 'bottom_sheet_signin.dart';
 
 class SignUp {
+  
   customBottomSignUp(BuildContext context) {
+  
+
     final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
     bool isPassword = true;
     bool checkBoxValueTwo = false;
     String email = "";
     String password = "";
-    AuthService? _authService;
+    AuthService? _authService= AuthService(context: context);
     // final auth = FirebaseAuth.instance;
 
     return showModalBottomSheet<void>(
+
       isScrollControlled: true,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0),

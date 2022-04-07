@@ -1,10 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
 
 import '../Widget/app_button_widget.dart';
 import '../Widget/input_field_widget.dart';
-import '../auth_services/auth.dart';
+
 import '../constants/constant.dart';
 import '../strings/color_string.dart';
 import '../strings/font_string.dart';
@@ -87,13 +86,13 @@ class _SetNameState extends State<SetName> {
                 setState(() {
                   widget.selectedIndex != 1;
                 });
-                if (!_formKey.currentState!.validate()) return;
-                AuthService.currentUser?.name = name;
+                // if (!_formKey.currentState!.validate()) return;
+                // AuthService.currentUser?.name = name;
 
-                await FirebaseFirestore.instance
-                    .doc("users/${AuthService.currentUser?.uid}")
-                    .update({'name': AuthService.currentUser?.name});
-                // Go.to(context, const CreateProfileImg());
+                // await FirebaseFirestore.instance
+                //     .doc("users/${AuthService.currentUser?.uid}")
+                //     .update({'name': AuthService.currentUser?.name});
+                // // Go.to(context, const CreateProfileImg());
 
                 widget.pageController.animateToPage(1,
                     duration: const Duration(milliseconds: 500),

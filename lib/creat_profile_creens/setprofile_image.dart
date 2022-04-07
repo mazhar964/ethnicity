@@ -1,11 +1,14 @@
 import 'dart:io';
-
+//: if true
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ethnicity/strings/color_string.dart';
 import 'package:ethnicity/strings/string.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../Widget/app_button_widget.dart';
+import '../auth_services/auth.dart';
 import '../strings/font_string.dart';
 import '../strings/text_string.dart';
 
@@ -228,10 +231,31 @@ class _SetProfileImageState extends State<SetProfileImage> {
             textColor: const Color(0xffFFFFFF),
             height: 53,
             width: double.infinity,
-            onPressed: () {
+            onPressed: () async {
               setState(() {
                 widget.selectedIndex != 2;
               });
+
+              if (image1 == null) return;
+              try {
+                await FirebaseStorage.instance
+                    .ref("profile/${AuthService.currentUser?.uid}")
+                    .putFile(image1!);
+                final String? url = await FirebaseStorage.instance
+                    .ref("profile/${AuthService.currentUser?.uid}")
+                    .getDownloadURL();
+
+                if (url == null) return;
+                AuthService.currentUser?.profileImg = url;
+
+                await FirebaseFirestore.instance
+                    .doc("users/${AuthService.currentUser?.uid}")
+                    .update({'imageUrl': AuthService.currentUser?.profileImg});
+              } on FirebaseException catch (e) {
+                print(e);
+                print("wefwehfuewfweufw${AuthService.currentUser?.profileImg}");
+              }
+
               widget.pageController.animateToPage(2,
                   duration: const Duration(milliseconds: 500),
                   curve: Curves.easeIn);

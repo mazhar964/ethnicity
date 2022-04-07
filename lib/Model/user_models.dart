@@ -2,10 +2,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class UserModel {
   String? uid, name, email, profileImg;
+
   
-  String? text;
- 
-  String? address;
+  var employee;
+
   Timestamp? createdAt;
   List? selectedList;
 
@@ -15,36 +15,29 @@ class UserModel {
       this.email,
       this.profileImg,
       this.createdAt,
-      this.text,
-      
-      this.selectedList
-
-
-      });
+      this.selectedList,
+      this.employee});
 
   UserModel.fromMap(Map<String, dynamic>? map) {
     if (map == null) return;
     uid = map["uid"];
+    employee = map["employee"];
     email = map["email"];
     name = map["name"];
     profileImg = map["imageUrl"];
-    text = map["text"];
+   
     createdAt = map["createdAt"];
     selectedList = map["selectedList"];
-   
-   
-   
   }
 
   Map<String, dynamic> toMap() {
     return {
       "uid": uid,
+      "employee": employee,
       "name": name,
       "email": email,
-      "text": text,
       "imageUrl": profileImg,
       "createdAt": createdAt,
-      "Address": address,
       "selectedList": selectedList ?? [],
     };
   }
@@ -53,4 +46,3 @@ class UserModel {
     return name == model?.name;
   }
 }
-

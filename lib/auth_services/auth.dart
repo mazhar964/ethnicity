@@ -3,6 +3,7 @@ import 'package:ethnicity/constants/constant.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 import '../Model/user_models.dart';
 import '../creat_profile_creens/create_profile_main.dart';
@@ -163,34 +164,34 @@ class AuthService {
 
   //****************** Login with Google ******************
 
-  // Future<void> loginWithGoogle() async {
-  //   try {
-  //     final GoogleSignInAccount? googleSignInAccount =
-  //         await GoogleSignIn().signIn();
+  Future<void> loginWithGoogle() async {
+    try {
+      final GoogleSignInAccount? googleSignInAccount =
+          await GoogleSignIn().signIn();
 
-  //     final GoogleSignInAuthentication? googleSignInAuthentication =
-  //         await googleSignInAccount?.authentication;
-  //     if (googleSignInAuthentication?.accessToken == null) {
-  //       AppDialog().showOSDialog(
-  //           context, "Error", "User cancel sign up procedure", "OK", () {});
-  //       return;
-  //     }
-  //     final AuthCredential credential = GoogleAuthProvider.credential(
-  //       accessToken: googleSignInAuthentication?.accessToken,
-  //       idToken: googleSignInAuthentication?.idToken,
-  //     );
+      final GoogleSignInAuthentication? googleSignInAuthentication =
+          await googleSignInAccount?.authentication;
+      if (googleSignInAuthentication?.accessToken == null) {
+        AppDialog().showOSDialog(
+            context, "Error", "User cancel sign up procedure", "OK", () {});
+        return;
+      }
+      final AuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleSignInAuthentication?.accessToken,
+        idToken: googleSignInAuthentication?.idToken,
+      );
 
-  //     final UserCredential authResult =
-  //         await _auth.signInWithCredential(credential);
-  //     final User? user = authResult.user;
+      final UserCredential authResult =
+          await _auth.signInWithCredential(credential);
+      final User? user = authResult.user;
 
-  //     if (user != null) {
-  //       await checkUserExists(uid: user.uid);
-  //     }
-  //   } catch (e) {
-  //     print("Google Login Error: $e");
-  //   }
-  // }
+      if (user != null) {
+        await _checkUserExists();
+      }
+    } catch (e) {
+      print("Google Login Error: $e");
+    }
+  }
 
   //****************** Login with Apple ******************
 
