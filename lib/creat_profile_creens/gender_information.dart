@@ -1,13 +1,8 @@
-import 'dart:ffi';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:ethnicity/strings/string.dart';
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
 
 import '../Widget/app_button_widget.dart';
-import '../Widget/input_field_widget.dart';
-import '../auth_services/auth.dart';
 import '../strings/color_string.dart';
 import '../strings/font_string.dart';
 import '../strings/text_string.dart';
@@ -175,12 +170,12 @@ class _GenderInformationState extends State<GenderInformation> {
                   widget.selectedIndex != 4;
                 });
 
-                AuthService.currentUser?.selectedList = selectedList;
-                await FirebaseFirestore.instance
-                    .doc("users/${AuthService.currentUser?.uid}")
-                    .update({
-                  'selectedList': AuthService.currentUser?.selectedList
-                });
+                // AuthService.currentUser?.selectedList = selectedList;
+                // await FirebaseFirestore.instance
+                //     .doc("users/${AuthService.currentUser?.uid}")
+                //     .update({
+                //   'selectedList': AuthService.currentUser?.selectedList
+                // });
 
                 widget.pageController.animateToPage(4,
                     duration: const Duration(milliseconds: 500),

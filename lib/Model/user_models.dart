@@ -4,6 +4,7 @@ class UserModel {
   String? uid, name, email, profileImg;
 
   
+ 
   var employee;
 
   Timestamp? createdAt;

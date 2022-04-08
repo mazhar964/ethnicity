@@ -252,8 +252,8 @@ class _SetProfileImageState extends State<SetProfileImage> {
                     .doc("users/${AuthService.currentUser?.uid}")
                     .update({'imageUrl': AuthService.currentUser?.profileImg});
               } on FirebaseException catch (e) {
-                print(e);
-                print("wefwehfuewfweufw${AuthService.currentUser?.profileImg}");
+                 print(e);
+                // print("wefwehfuewfweufw${AuthService.currentUser?.profileImg}");
               }
 
               widget.pageController.animateToPage(2,
